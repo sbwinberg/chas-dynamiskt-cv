@@ -1,0 +1,80 @@
+:root{ 
+    --primary-color: #0c2c77;
+    --secondary-color: lightblue;
+    --text-color: white;
+    --default-padding: 1rem;
+    --card-shadow: 0 0 3px rgba(0, 0, 0, 0.432)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    line-height: 1.2;
+}
+html {
+    min-height: 100%;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+header, footer {
+    width: 100%;
+    min-height: 4rem;
+    padding: var(--default-padding);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+}
+
+/* HEADER */
+header {
+    flex-direction: column;
+    gap: 1rem;
+}
+.header-navigation {
+    list-style-type: none;
+    display: flex;
+    gap: 3rem;
+    padding-bottom: var(--default-padding);
+}
+.header-navigation a {
+    text-decoration: none;
+    font-size: large;
+    color: var(--text-color);
+}
+
+/* MAIN */
+main{
+    height: 100%;
+}
+
+/* FOOTER */
+footer{
+    justify-content: space-between;
+}
+footer img {
+    height: 2rem;
+}
+footer img:hover{
+    scale: 1.2;
+    transition: scale .2s;
+}
+
+/* CARD HOVER */
+@media screen and (min-width: 1000px) {
+    footer {
+        justify-content: space-around;
+    }
+    .card:hover {
+        scale: 1.05;
+        background-color: var(--secondary-color);
+        box-shadow: var(--card-shadow);
+        transition: scale 0.2s, background-color .2s;
+    }
+}
