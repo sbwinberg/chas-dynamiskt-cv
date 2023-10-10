@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Gabarito";
+    src: url();
+}
+
 :root{ 
     --primary-color: #0c2c77;
     --secondary-color: lightblue;
@@ -5,12 +10,11 @@
     --default-padding: 1rem;
     --card-shadow: 0 0 3px rgba(0, 0, 0, 0.432)
 }
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Gabarito';
     line-height: 1.2;
 }
 html {
