@@ -82,3 +82,31 @@ footer img:hover{
         transition: scale 0.2s, background-color .2s;
     }
 }
+
+.hamburger {
+    position: relative;
+    z-index: 10;
+    border: none;
+    background: white;
+    cursor: pointer;
+  }
+  .closeIcon {
+    display: none;
+  }
+  .menu {
+    position: fixed;
+    transform: translateX(100%);
+    transition: transform 0.2s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+    background: rgba(0, 0, 0, 0.192);
+    color: white;
+    list-style: none;
+    padding-top: 4rem;
+  }
+  .showMenu {
+    transform: translateX(0);
+  }
