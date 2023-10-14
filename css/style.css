@@ -4,8 +4,8 @@
 }
 
 :root{ 
-    --primary-color: #0c2c77;
-    --secondary-color: lightblue;
+    --primary-color: lightblue;
+    --secondary-color: #0c2c776c;
     --text-color: white;
     --default-padding: 1rem;
     --card-shadow: 0 0 3px rgba(0, 0, 0, 0.432)
