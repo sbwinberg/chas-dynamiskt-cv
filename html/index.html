@@ -4,24 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
     rel="stylesheet">
+    <script src="../js/app.js" defer></script>
 </head>
 <body>
     <header>
         <h1>Emil Winberg</h1>
-        <nav>
-            <ul class="header-navigation">
-                <li><a href="./index.html" class="home">Hem</a></li>
-                <li><a href="./cv.html" class="cv">CV</a></li>
-                <li><a href="./contact.html" class="contact">Kontakt</a></li>
-            </ul>
-        </nav>
+        <div class="dropdown">
+            <nav>
+                <ul class="header-navigation menu">
+                    <li><a href="./index.html" class="menuItem home">Hem</a></li>
+                    <li><a href="./cv.html" class="menuItem cv">CV</a></li>
+                    <li><a href="./contact.html" class="menuItem contact">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
         <button class="hamburger">
             <i class="menuIcon material-icons">menu</i>
             <i class="closeIcon material-icons">close</i>
@@ -29,7 +32,7 @@
     </header>
     <main>
         <section class="profile-section">
-            <figure><img src="./images/profile-picture.jpeg" alt="profile-picture"></figure>
+            <figure><img src="../images/profile-picture.jpeg" alt="profile-picture"></figure>
             <p class="profile-text">
                 Jag är en glad, engagerad och nyfiken kille som älskar att utforska världen omkring mig. Med ett ständigt leende på läpparna tar jag varje dag som en ny möjlighet att lära och växa. Mitt engagemang sträcker sig från mina intressen och hobbies till att stödja och inspirera de människor jag har runt mig. <br><br>
                 Min nyfikenhet är mitt driv, och jag älskar att fördjupa mig i nya ämnen och utmana mig själv att förstå mer. Oavsett om det handlar om att utforska okända platser, lära mig nya färdigheter eller bara lyssna på andra människors berättelser, så brinner jag för att lära och utvecklas.<br><br>
@@ -42,31 +45,31 @@
             <div class="cards">
                 <div class="card">
                     <h3>Landing page</h3>
-                    <img src="./images/project-picture.jpg" alt="project picture">
+                    <img src="../images/project-picture.jpg" alt="project picture">
                     <a href="https://github.com/sbwinberg/Project-Landing-Page" target="_blank">Link</a>
                 </div>
                 <div class="card">
                     <h3>TIC-TAC-TOE</h3>
-                    <img src="./images/tic-tac-toe-game.svg" alt="project picture" class="tic-tac-toe">
+                    <img src="../images/tic-tac-toe-game.svg" alt="project picture" class="tic-tac-toe">
                     <a href="https://github.com/sbwinberg/tic-tac-toe" target="_blank">Link</a>
                 </div>
                 <div class="card">
                     <h3>Projekt n</h3>
-                    <img src="./images/project-picture.jpg" alt="project picture">
+                    <img src="../images/project-picture.jpg" alt="project picture">
                     <a href="#">Link</a>
                 </div>
                 <div class="card">
                     <h3>Projekt n</h3>
-                    <img src="./images/project-picture.jpg" alt="project picture">
+                    <img src="../images/project-picture.jpg" alt="project picture">
                     <a href="#">Link</a>
                 </div>
             </div>
         </section>
     </main>
     <footer>
-        <a href="https://www.linkedin.com/in/emil-winberg-028965123/"><img src="./images/iconmonstr-linkedin-3.svg" alt="Linked-in"></a>
-        <a href="mailto:emil.winberg@chasacademy.se"><img src="./images/Gmail_icon_(2020).svg.png" alt="Email"></a>
-        <a href="https://github.com/sbwinberg"><img src="./images/github-mark.svg" alt="GitHub"></a>
+        <a href="https://www.linkedin.com/in/emil-winberg-028965123/"><img src="../images/iconmonstr-linkedin-3.svg" alt="Linked-in"></a>
+        <a href="mailto:emil.winberg@chasacademy.se"><img src="../images/Gmail_icon_(2020).svg.png" alt="Email"></a>
+        <a href="https://github.com/sbwinberg"><img src="../images/github-mark.svg" alt="GitHub"></a>
     </footer>
 </body>
 </html>
