@@ -34,7 +34,7 @@ img {
     color: white;
     text-align: center;
 }
-.cards {
+.project-cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--default-padding);

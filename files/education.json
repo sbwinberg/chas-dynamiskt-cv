@@ -1,0 +1,126 @@
+
+{
+    "educations":
+    [
+        {
+            "name": "Minerva gymnasium",
+            "type": "edu",
+            "form": "Program",
+            "subject": "Naturvetenskapliga programmet",
+            "yearStart": 2013,
+            "yearEnd": 2016,
+            "href": "#minervaModal",
+            "img": "../images/Minervagymnasium_Ikon_Vit.png",
+            "imgClass": "white-to-black",
+            "id": 1
+        },
+        {
+            "name": "Göteborgs Universitet",
+            "type": "education",
+            "form": "Program",
+            "subject": "Marina vetenskaper",
+            "yearStart": 2019,
+            "yearEnd": 2022,
+            "href": "https://www.gu.se/studera/hitta-utbildning/marin-vetenskap-kandidatprogram-n1mav",
+            "img": "../images/LO_GU_SV_flag.png",
+            "imgClass": "white-to-black",
+            "id": 2
+            
+        },
+        {
+            "name": "Chas Academy",
+            "type": "education",
+            "form": "Program",
+            "subject": "Fullstack Javascript Extended",
+            "yearStart": 2023,
+            "yearEnd": 2025,
+            "href": "https://chasacademy.se/program/fullstackutvecklare-javascript-flera-studieorter",
+            "img": "../images/chas-academy-logo.png",
+            "imgClass": "white-to-black",
+            "id": 3
+        },
+        {
+            "name": "Luleå Tekniska Universitet",
+            "type": "education",
+            "form": "Course",
+            "subject": "Inledande programmering i Java",
+            "yearStart": 2023,
+            "yearEnd": 2023,
+            "href": "https://www.ltu.se/edu/course/D00/D0017D/D0017D-Inledande-programmering-i-Java-1.67717",
+            "img": "../images/1200px-LTU_logo.svg.png",
+            "imgClass": "color-to-black",
+            "id": 4
+        },
+        {
+            "name": "The Odin Project",
+            "type": "education",
+            "form": "Course",
+            "subject": "Foundations Course",
+            "yearStart": 2022,
+            "yearEnd": 2023,
+            "href": "https://www.theodinproject.com/paths/foundations/courses/foundations",
+            "img": "../images/odin-lined.png",
+            "imgClass": "white-to-black",
+            "id": 5
+        },
+        {
+            "name": "The Odin Project",
+            "type": "education",
+            "form": "Course",
+            "subject": "Full Stack JavaScript",
+            "yearStart": 2023,
+            "yearEnd": 2023,
+            "href": "https://www.theodinproject.com/paths/full-stack-javascript",
+            "img": "../images/odin-lined.png",
+            "imgClass": "white-to-black",
+            "id": 6
+        }
+    ],
+    "jobs":
+    [
+        {
+            "name": "LIDL",
+            "type": "work",
+            "subject": "Medarbetare",
+            "yearStart": 2016,
+            "yearEnd": 2018,
+            "href": "https://www.lidl.se/",
+            "img": "../images/lidl-logo-blanco.png",
+            "imgClass": "white-to-black",
+            "id": 7
+        },
+        {
+            "name": "Sibylla",
+            "type": "work",
+            "subject": "Kock, Serveringsansvarig",
+            "yearStart": 2018,
+            "yearEnd": 2019,
+            "href": "https://www.sibylla.se/",
+            "img": "../images/Sibylla_logo.svg.png",
+            "imgClass": "color-to-black",
+            "id": 8
+        },
+        {
+            "name": "Biltema",
+            "type": "work",
+            "subject": "Medarbetare, Kundservice",
+            "yearStart": 2019,
+            "yearEnd": 2020,
+            "href": "https://www.biltema.se/",
+            "img": "../images/Biltema_logo.svg.png",
+            "imgClass": "color-to-black",
+            "id": 9
+        },
+        {
+            "name": "ICA",
+            "type": "work",
+            "subject": "Kassapersonal, Driftansvarig",
+            "yearStart": 2022,
+            "yearEnd": 2023,
+            "href": "https://www.ica.se/",
+            "img": "../images/ICA-logotyp.png",
+            "imgClass": "color-to-black",
+            "id": 10
+        }
+    ]
+}

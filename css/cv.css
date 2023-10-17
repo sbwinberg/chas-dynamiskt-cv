@@ -28,7 +28,7 @@ main{
     margin-bottom: var(--default-padding);
 }
 .education h2,
-.work h2 {
+.jobs h2 {
     text-align: center;
     padding-bottom: var(--default-padding);
 }
@@ -52,12 +52,11 @@ main{
     flex-direction: column;
     align-items: center;
 }
-
-.card a{
+.card a {
     margin-top: auto;
     margin-bottom: auto;
 }
-.card img {
+.card img{
     display: block;
     width: 100%;
 }
@@ -69,10 +68,22 @@ main{
 }
 
 
+/* .hidden {
+    display: none;
+} */
 
-
-
-
+.overlay{
+    position: fixed;
+    width: 100%;
+    min-height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    z-index: 1;
+}
+.modal {
+    display: flex;
+    width: 70%;
+}
 
 
 /* .education {
