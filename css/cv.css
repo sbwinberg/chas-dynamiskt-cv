@@ -52,13 +52,11 @@ main{
     flex-direction: column;
     align-items: center;
 }
-.card a {
+.card img{
     margin-top: auto;
     margin-bottom: auto;
-}
-.card img{
     display: block;
-    width: 100%;
+    width: 70%; 
 }
 .white-to-black{
     filter: invert(100%);
@@ -67,24 +65,32 @@ main{
     filter: saturate(0%) brightness(70%) contrast(1000%);
 }
 
-
-/* .hidden {
-    display: none;
-} */
-
-.overlay{
+.modalCard {
+    background-color: white;
+    width: 80%;
+    height: 40%;
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.322);
+    border-radius: 10px;
     position: fixed;
-    width: 100%;
-    min-height: 100%;
-    background: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(3px);
-    z-index: 1;
-}
-.modal {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
     display: flex;
-    width: 70%;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
-
+.hidden {
+    display: none;
+}
+.modalCard img {
+    height: 30%;
+}
+.modalCard::backdrop{
+    background-color: #0000001e;
+}
 
 /* .education {
     width: 100%;
