@@ -65,41 +65,13 @@ main{
     filter: saturate(0%) brightness(70%) contrast(1000%);
 }
 
-.modalCard {
-    background-color: white;
-    width: 80%;
-    height: 40%;
-    padding: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.322);
-    border-radius: 10px;
-    position: fixed;
+dialog {
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    display: flex;
+    translate: -50% -50%;
+    height: 60%;
+    width: 90%;
+    /* display: none;  SÄTT IGÅNG DENNA NÄR STYLING ÄR FÄRDIG*/
+    /* display: flex;  TA BORT DENNA när styling är färdig*/
     flex-direction: column;
-    align-items: center;
-    gap: 1rem;
 }
-.hidden {
-    display: none;
-}
-.modalCard img {
-    height: 30%;
-}
-.modalCard::backdrop{
-    background-color: #0000001e;
-}
-
-/* .education {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-} */
-/* .cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--default-padding);
-    padding: var(--default-padding) 0;
-} */

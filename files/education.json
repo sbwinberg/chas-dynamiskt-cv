@@ -12,7 +12,7 @@
             "href": "#minervaModal",
             "img": "../images/Minervagymnasium_Ikon_Vit.png",
             "imgClass": "white-to-black",
-            "id": 1
+            "id": 0
         },
         {
             "name": "Göteborgs Universitet",
@@ -24,7 +24,7 @@
             "href": "https://www.gu.se/studera/hitta-utbildning/marin-vetenskap-kandidatprogram-n1mav",
             "img": "../images/LO_GU_SV_flag.png",
             "imgClass": "white-to-black",
-            "id": 2
+            "id": 1
             
         },
         {
@@ -37,7 +37,7 @@
             "href": "https://chasacademy.se/program/fullstackutvecklare-javascript-flera-studieorter",
             "img": "../images/chas-academy-logo.png",
             "imgClass": "white-to-black",
-            "id": 3
+            "id": 2
         },
         {
             "name": "Luleå Tekniska Universitet",
@@ -49,7 +49,7 @@
             "href": "https://www.ltu.se/edu/course/D00/D0017D/D0017D-Inledande-programmering-i-Java-1.67717",
             "img": "../images/1200px-LTU_logo.svg.png",
             "imgClass": "color-to-black",
-            "id": 4
+            "id": 3
         },
         {
             "name": "The Odin Project",
@@ -61,7 +61,7 @@
             "href": "https://www.theodinproject.com/paths/foundations/courses/foundations",
             "img": "../images/odin-lined.png",
             "imgClass": "white-to-black",
-            "id": 5
+            "id": 4
         },
         {
             "name": "The Odin Project",
@@ -73,7 +73,7 @@
             "href": "https://www.theodinproject.com/paths/full-stack-javascript",
             "img": "../images/odin-lined.png",
             "imgClass": "white-to-black",
-            "id": 6
+            "id": 5
         }
     ],
     "jobs":
@@ -87,7 +87,7 @@
             "href": "https://www.lidl.se/",
             "img": "../images/lidl-logo-blanco.png",
             "imgClass": "white-to-black",
-            "id": 7
+            "id": 6
         },
         {
             "name": "Sibylla",
@@ -98,7 +98,7 @@
             "href": "https://www.sibylla.se/",
             "img": "../images/Sibylla_logo.svg.png",
             "imgClass": "color-to-black",
-            "id": 8
+            "id": 7
         },
         {
             "name": "Biltema",
@@ -109,7 +109,7 @@
             "href": "https://www.biltema.se/",
             "img": "../images/Biltema_logo.svg.png",
             "imgClass": "color-to-black",
-            "id": 9
+            "id": 8
         },
         {
             "name": "ICA",
@@ -120,7 +120,7 @@
             "href": "https://www.ica.se/",
             "img": "../images/ICA-logotyp.png",
             "imgClass": "color-to-black",
-            "id": 10
+            "id": 9
         }
     ]
 }

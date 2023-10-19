@@ -4,9 +4,16 @@ const menuItems = document.querySelectorAll('.menu-item');
 const hamburger = document.querySelector('.hamburger');
 const closeIcon = document.querySelector('.closeIcon');
 const menuIcon = document.querySelector('.menuIcon');
-const overlay = document.querySelector('.overlay');
 
-// Menu
+
+function addGlobalEventListener(type, selector, callback) {
+    document.addEventListener(type, e => {
+        if(e.target.matches(selector)) callback(e);
+    })
+}
+// Buttons and menu
+
+
 function toggleMenu() {
     if(menu.classList.contains('showMenu')) {
         menu.classList.remove('showMenu');
@@ -20,15 +27,18 @@ function toggleMenu() {
 }
 hamburger.addEventListener('click', toggleMenu);
 
+
+// Cards
 const renderCards = ((data) => {
     for(const occupation in data){
         var query = "." + data[occupation][0].type.toString();
         var container = document.querySelector(query);
 
         for(const key in data[occupation]){
-            var card = document.createElement('div');
-            card.className = 'card';
-            card.id = data[occupation][key].id;
+            var card = document.createElement('button');
+            card.className = 'card' + ' '  + (data[occupation][key].id.toString());
+            card.setAttribute("data-open-modal", '');
+            // card.id = data[occupation][key].id;
     
             var title = document.createElement('h4');
             title.innerHTML = data[occupation][key].name;
@@ -37,7 +47,7 @@ const renderCards = ((data) => {
             img.src = data[occupation][key].img;
             img.classList.add(data[occupation][key].imgClass);
             img.alt = data[occupation][key].name;
-    
+
             card.appendChild(title);
             card.appendChild(img);
             container.appendChild(card);
@@ -45,47 +55,73 @@ const renderCards = ((data) => {
     }
 })(data);
 
-const renderModals = ((data) => {
-    for(var occupation in data){
-        console.log(occupation);
-        const modals = document.querySelector('.modals');
 
-        for(var key in data[occupation]){
-            var modalCard = document.createElement('div');
-            modalCard.className = 'modalCard hidden';
-            modalCard.id = key;
+// Modal customization
+const openButton = document.querySelectorAll("[data-open-modal]")
+const closeButton = document.querySelector("[data-close-modal]");
+const modal = document.querySelector("[data-modal");
 
-            var modalTitle = document.createElement('h3');
-            modalTitle.innerText = data[occupation][key].name;
+openButton.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        modal.showModal();
+        modal.style.display = 'flex';
+    })
+})
 
-            var modalLogo = document.createElement('img');
-            modalLogo.src = data[occupation][key].img;
-            modalLogo.classList.add(data[occupation][key].imgClass);
-            modalLogo.alt = data[occupation][key].name;
+closeButton.addEventListener("click", () => {
+    modal.close();
+    modal.style.display = 'none'
+})
 
-            var modalContent = document.createElement('div');
-            // modalContent.innerText = data[occupation][key].description;
-            modalContent.innerText = 'Heyheyhey!';
-
-            modalCard.appendChild(modalTitle);
-            console.log(modalTitle);
-
-            modalCard.appendChild(modalLogo);
-            console.log(modalLogo);
-
-            modalCard.appendChild(modalContent);
-            console.log(modalContent);
-
-            modals.appendChild(modalCard);
-        }
+modal.addEventListener("click", e => {
+    const dialogDimensions = modal.getBoundingClientRect();
+    if (
+        e.clientX < dialogDimensions.left ||
+        e.clientX > dialogDimensions.right || 
+        e.clientY < dialogDimensions.top ||
+        e.clientY > dialogDimensions.bottom
+    ) {
+        modal.close();
+        modal.style.display = 'none'
     }
-})(data);
+})
+
+
+
+// const renderModals = ((data) => {
+//     for(const occupation in data){
+//         const modals = document.querySelector('.modals');
+//         for(const key in data[occupation]){
+//             var modal = document.createElement('dialog');
+//             // modalCard.className = 'modal hidden' + ' ' + (key.toString());
+//             // modalCard.id = 'modal' + key;
+//             modal.setAttribute('data-modal');
+
+
+//             var modalTitle = document.createElement('h3');
+//             modalTitle.innerText = data[occupation][key].name;
+
+//             var modalLogo = document.createElement('img');
+//             modalLogo.src = data[occupation][key].img;
+//             modalLogo.classList.add(data[occupation][key].imgClass);
+//             modalLogo.alt = data[occupation][key].name;
+
+//             var modalContent = document.createElement('div');
+//             // modalContent.innerText = data[occupation][key].description;
+//             modalContent.innerText = 'Heyheyhey!';
+
+//             modalCard.appendChild(modalTitle);
+//             modalCard.appendChild(modalLogo);
+//             modalCard.appendChild(modalContent);
+//             modals.appendChild(modal);
+//         }
+//     }
+// })(data);
 
 
 
 
-
-// function toggleModal(e) {
+// const toggleModal = (e) => {
 //     if(e.target.classList.contains('hidden')){
 //         e.target.classList.remove('hidden');
 //         overlay.classList.remove('hidden');
@@ -94,6 +130,7 @@ const renderModals = ((data) => {
 //         overlay.classList.add('hidden');
 //     }
 // };
+// addGlobalEventListener('click', 'card', toggleModal);
 
 
 // (async () => {
