@@ -10,10 +10,9 @@ function addGlobalEventListener(type, selector, callback) {
     document.addEventListener(type, e => {
         if(e.target.matches(selector)) callback(e);
     })
-}
+};
+
 // Buttons and menu
-
-
 function toggleMenu() {
     if(menu.classList.contains('showMenu')) {
         menu.classList.remove('showMenu');
@@ -24,24 +23,29 @@ function toggleMenu() {
         closeIcon.style.display = 'block';
         menuIcon.style.display = 'none';
     }
-}
+};
 hamburger.addEventListener('click', toggleMenu);
-
-
 
 const createModal = ((data) => {
     const modal = document.createElement('dialog');
     modal.className = 'modal' + ' '  + (data.id.toString());
     modal.setAttribute("data-modal", '');
-    // card.id = data[occupation][key].id;
 
     const title = document.createElement('h3');
     title.innerHTML = data.name;
+
+    const subject = document.createElement('h6');
+    subject.innerHTML = data.subject;
 
     const img = document.createElement('img');
     img.src = data.img;
     img.classList.add(data.imgClass);
     img.alt = data.name;
+
+    const link = document.createElement('a');
+    link.href = data.href;
+    link.target = '_blank';
+    link.appendChild(img);
 
     const timeSpan = document.createElement('h5');
     timeSpan.innerHTML = data.yearStart + ' - ' + data.yearEnd;
@@ -58,7 +62,7 @@ const createModal = ((data) => {
     closeButton.addEventListener("click", () => {
         modal.close();
         modal.style.display = 'none'
-    })
+    });
 
     modal.addEventListener("click", e => {
         const dialogDimensions = modal.getBoundingClientRect();
@@ -71,11 +75,11 @@ const createModal = ((data) => {
             modal.close();
             modal.style.display = 'none'
         }
-    })
+    });
     
-
     modal.appendChild(title);
-    modal.appendChild(img);
+    modal.appendChild(subject);
+    modal.appendChild(link);
     modal.appendChild(timeSpan);
     modal.appendChild(description);
     modal.appendChild(closeButton);
@@ -97,7 +101,6 @@ const renderCards = ((data) => {
                 modal.showModal();
                 modal.style.display = 'flex';
             })
-            // card.id = data[occupation][key].id;
     
             const title = document.createElement('h4');
             title.innerHTML = data[occupation][key].name;
@@ -106,7 +109,6 @@ const renderCards = ((data) => {
             img.src = data[occupation][key].img;
             img.classList.add(data[occupation][key].imgClass);
             img.alt = data[occupation][key].name;
-            console.log(data[occupation][key].id);
 
             const modal = createModal(data[occupation][key])
 
@@ -117,73 +119,6 @@ const renderCards = ((data) => {
         }
     }
 })(data);
-
-
-// Modal customization
-// const openButton = document.querySelectorAll("[data-open-modal]")
-// const closeButton = document.querySelector("[data-close-modal]");
-// const modal = document.querySelector("[data-modal");
-
-
-// modal.addEventListener("click", e => {
-//     const dialogDimensions = modal.getBoundingClientRect();
-//     if (
-//         e.clientX < dialogDimensions.left ||
-//         e.clientX > dialogDimensions.right || 
-//         e.clientY < dialogDimensions.top ||
-//         e.clientY > dialogDimensions.bottom
-//     ) {
-//         modal.close();
-//         modal.style.display = 'none'
-//     }
-// })
-
-
-
-// const renderModals = ((data) => {
-//     for(const occupation in data){
-//         const modals = document.querySelector('.modals');
-//         for(const key in data[occupation]){
-//             var modal = document.createElement('dialog');
-//             // modalCard.className = 'modal hidden' + ' ' + (key.toString());
-//             // modalCard.id = 'modal' + key;
-//             modal.setAttribute('data-modal');
-
-
-//             var modalTitle = document.createElement('h3');
-//             modalTitle.innerText = data[occupation][key].name;
-
-//             var modalLogo = document.createElement('img');
-//             modalLogo.src = data[occupation][key].img;
-//             modalLogo.classList.add(data[occupation][key].imgClass);
-//             modalLogo.alt = data[occupation][key].name;
-
-//             var modalContent = document.createElement('div');
-//             // modalContent.innerText = data[occupation][key].description;
-//             modalContent.innerText = 'Heyheyhey!';
-
-//             modalCard.appendChild(modalTitle);
-//             modalCard.appendChild(modalLogo);
-//             modalCard.appendChild(modalContent);
-//             modals.appendChild(modal);
-//         }
-//     }
-// })(data);
-
-
-
-
-// const toggleModal = (e) => {
-//     if(e.target.classList.contains('hidden')){
-//         e.target.classList.remove('hidden');
-//         overlay.classList.remove('hidden');
-//     } else {
-//         e.target.classList.add('hidden');
-//         overlay.classList.add('hidden');
-//     }
-// };
-// addGlobalEventListener('click', 'card', toggleModal);
-
 
 // (async () => {
 //     const response = await fetch('https://api.github.com/users/sbwinberg/repos');

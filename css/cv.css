@@ -69,26 +69,32 @@ dialog {
     top: 50%;
     left: 50%;
     translate: -50% -50%;
-    height: 60%;
+    height: fit-content;
     width: 90%;
-    max-width: 600px;
+    max-width: 400px;
     border-radius: 10px;
     border: none;
     box-shadow: 0 0 10px black;
     padding: 1rem;
-    display: none; 
-    /* SÄTT IGÅNG DENNA NÄR STYLING ÄR FÄRDIG */
-    /* display: flex;   */
-    /* TA BORT DENNA när styling är färdig */
+    display: none;
     flex-direction: column;
     align-items: center;
+    gap: .5rem;
+    text-align: center;
 }
 dialog::backdrop {
     background: rgba(0, 0, 0, .5);
 }
 dialog img {
-    height: 20%;
-    object-fit: cover;
+    width: 60%;
+    max-width: 10rem;
+}
+dialog a:hover {
+    scale: 1.05;
+}
+dialog p {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 
 .close {

@@ -9,10 +9,11 @@
             "subject": "Naturvetenskapliga programmet",
             "yearStart": 2013,
             "yearEnd": 2016,
-            "href": "#minervaModal",
+            "href": "https://www.minervagymnasium.se/naturvetenskapsprogrammet",
             "img": "../images/Minervagymnasium_Ikon_Vit.png",
             "imgClass": "white-to-black",
-            "id": 0
+            "id": 0,
+            "description" : "Min gymnasietid spenderades på Minerva gymnasium i Umeå där jag läste naturlinjen med inriktning naturvetenskap."
         },
         {
             "name": "Göteborgs Universitet",
@@ -24,7 +25,8 @@
             "href": "https://www.gu.se/studera/hitta-utbildning/marin-vetenskap-kandidatprogram-n1mav",
             "img": "../images/LO_GU_SV_flag.png",
             "imgClass": "white-to-black",
-            "id": 1
+            "id": 1,
+            "description" : "Jag läste min kandidatexamen på Göteborgs Universitet där jag läste marina vetenskaper med inriktning marin fysik. Det var här jag upptäckte programmering efter att ha jobbat med datamanipulering och datamodeller"
             
         },
         {
@@ -37,7 +39,8 @@
             "href": "https://chasacademy.se/program/fullstackutvecklare-javascript-flera-studieorter",
             "img": "../images/chas-academy-logo.png",
             "imgClass": "white-to-black",
-            "id": 2
+            "id": 2,
+            "description": "När jag hade grunderna i webbutveckling tänkte jag att en utbildning inom programmering inte vore så illa. Jag sökte runt bland valmöjligheterna och landade till sist i 'Fullstack Javascript Extended' på Chas Academy då det var på distans och hade flexibiliteten jag behövde för att kunna jobba, studera och arbeta på mina egna projekt samtidigt."
         },
         {
             "name": "Luleå Tekniska Universitet",
@@ -49,7 +52,8 @@
             "href": "https://www.ltu.se/edu/course/D00/D0017D/D0017D-Inledande-programmering-i-Java-1.67717",
             "img": "../images/1200px-LTU_logo.svg.png",
             "imgClass": "color-to-black",
-            "id": 3
+            "id": 3,
+            "description": "När jag tagit min kandidat och upptäckt att programmering var mer  för mig så läste jag en kurs i Java på Luleå Tekniska universitet."
         },
         {
             "name": "The Odin Project",
@@ -61,7 +65,8 @@
             "href": "https://www.theodinproject.com/paths/foundations/courses/foundations",
             "img": "../images/odin-lined.png",
             "imgClass": "white-to-black",
-            "id": 4
+            "id": 4,
+            "description": "Mellan uppgifterna i kursen jag läste kändes det som att jag hade mer att ge i programmeringsväg. Jag började söka efter resurser online där jag skulle kunna lära mig vidare om programmering, det var då jag upptäckte the Odin Project. Här fick jag lära mig grundläggande HTML, CSS och JavaScript samt GIT och Github."
         },
         {
             "name": "The Odin Project",
@@ -73,7 +78,8 @@
             "href": "https://www.theodinproject.com/paths/full-stack-javascript",
             "img": "../images/odin-lined.png",
             "imgClass": "white-to-black",
-            "id": 5
+            "id": 5,
+            "description": "Efter första kursen hos the Odin Project hade jag helt fallit för webbutveckling och bestämde mig för att ta deras vidarekurs i Fullstack Javascript. Här fick jag lära mig mer avancerad JavaScript som object-orienterad programmering, APIer och DOM-manipulering. I kursen lärde jag mig även grunderna i React och NodeJS."
         }
     ],
     "jobs":
@@ -87,7 +93,8 @@
             "href": "https://www.lidl.se/",
             "img": "../images/lidl-logo-blanco.png",
             "imgClass": "white-to-black",
-            "id": 6
+            "id": 6,
+            "description": "Starten på jobbkarriären började på LIDL i Umeå där jag jobbade som allt-i-allo. Jobbade i kassan, bakade bröd, gjorde beställningar, kontorsarbete och varuplock"
         },
         {
             "name": "Sibylla",
@@ -98,7 +105,8 @@
             "href": "https://www.sibylla.se/",
             "img": "../images/Sibylla_logo.svg.png",
             "imgClass": "color-to-black",
-            "id": 7
+            "id": 7,
+            "description": "Efter att jag kommit tillbaka till Sverige efter att ha varit på resande fot i ett halvår så jobbade jag på Sibylla/Busstop Bar i Umeå. Där hade jag hand om köket och serveringen. Arbetsuppgifterna inkluderade kassaarbete, matlagning, servering av alkohol, och gjorde beställningar. Jag hade även hand om spelmaskinerna från Svenska Spel."
         },
         {
             "name": "Biltema",
@@ -109,7 +117,8 @@
             "href": "https://www.biltema.se/",
             "img": "../images/Biltema_logo.svg.png",
             "imgClass": "color-to-black",
-            "id": 8
+            "id": 8,
+            "description": "Under tiden jag läste min kandidat i Marinvetenskap sommarjobbade jag på Biltema i Umeå där jag stod i kundservice och hade hand om kundfrågor, reklamationer och kassan. Jag var även med och plockade leveranser."
         },
         {
             "name": "ICA",
@@ -120,7 +129,8 @@
             "href": "https://www.ica.se/",
             "img": "../images/ICA-logotyp.png",
             "imgClass": "color-to-black",
-            "id": 9
+            "id": 9,
+            "description": "Från sista sommaren under min studietid till och med nu jobbar jag på ICA Kvantum Sannegården. Jag började i kassan och självscanningen och bytte sedan till plock-laget där jag var med och plockade leveranser i alla avdelningarna. Jag är nu driftansvarig och har hand om hela butiken på kvällarna där jag tar emot leveranser och ser till att butiken ser snygg ut."
         }
     ]
 }
