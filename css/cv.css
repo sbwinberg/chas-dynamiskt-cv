@@ -40,13 +40,13 @@ main{
     padding-bottom: var(--default-padding);
 }
 .card {
+    background-color: white;
     padding: var(--default-padding);
     flex: 0 1 calc(50% - 1rem);
     max-width: 250px;
     aspect-ratio: 1/1.2;
     border: 1px solid black;
     border-radius: 10px;
-
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -71,7 +71,33 @@ dialog {
     translate: -50% -50%;
     height: 60%;
     width: 90%;
-    /* display: none;  SÄTT IGÅNG DENNA NÄR STYLING ÄR FÄRDIG*/
-    /* display: flex;  TA BORT DENNA när styling är färdig*/
+    max-width: 600px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 10px black;
+    padding: 1rem;
+    display: none; 
+    /* SÄTT IGÅNG DENNA NÄR STYLING ÄR FÄRDIG */
+    /* display: flex;   */
+    /* TA BORT DENNA när styling är färdig */
     flex-direction: column;
+    align-items: center;
+}
+dialog::backdrop {
+    background: rgba(0, 0, 0, .5);
+}
+dialog img {
+    height: 20%;
+    object-fit: cover;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border: none;
+}
+.material-icons.md-36 {
+    font-size: 36px;
 }

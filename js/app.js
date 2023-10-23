@@ -28,63 +28,115 @@ function toggleMenu() {
 hamburger.addEventListener('click', toggleMenu);
 
 
+
+const createModal = ((data) => {
+    const modal = document.createElement('dialog');
+    modal.className = 'modal' + ' '  + (data.id.toString());
+    modal.setAttribute("data-modal", '');
+    // card.id = data[occupation][key].id;
+
+    const title = document.createElement('h3');
+    title.innerHTML = data.name;
+
+    const img = document.createElement('img');
+    img.src = data.img;
+    img.classList.add(data.imgClass);
+    img.alt = data.name;
+
+    const timeSpan = document.createElement('h5');
+    timeSpan.innerHTML = data.yearStart + ' - ' + data.yearEnd;
+
+    const description = document.createElement('p');
+    description.className = 'description';
+    description.innerHTML = data.description;
+
+    const closeButton = document.createElement('button');
+    closeButton.className = 'close material-icons md-36';
+    closeButton.setAttribute("data-close-modal", "");
+    closeButton.innerHTML = 'close';
+
+    closeButton.addEventListener("click", () => {
+        modal.close();
+        modal.style.display = 'none'
+    })
+
+    modal.addEventListener("click", e => {
+        const dialogDimensions = modal.getBoundingClientRect();
+        if (
+            e.clientX < dialogDimensions.left ||
+            e.clientX > dialogDimensions.right || 
+            e.clientY < dialogDimensions.top ||
+            e.clientY > dialogDimensions.bottom
+        ) {
+            modal.close();
+            modal.style.display = 'none'
+        }
+    })
+    
+
+    modal.appendChild(title);
+    modal.appendChild(img);
+    modal.appendChild(timeSpan);
+    modal.appendChild(description);
+    modal.appendChild(closeButton);
+    return modal;
+});
+
+
 // Cards
 const renderCards = ((data) => {
     for(const occupation in data){
-        var query = "." + data[occupation][0].type.toString();
-        var container = document.querySelector(query);
+        const query = "." + data[occupation][0].type.toString(); // .education or .jobs
+        const container = document.querySelector(query);
 
         for(const key in data[occupation]){
-            var card = document.createElement('button');
+            const card = document.createElement('button');
             card.className = 'card' + ' '  + (data[occupation][key].id.toString());
             card.setAttribute("data-open-modal", '');
+            card.addEventListener("click", () => {
+                modal.showModal();
+                modal.style.display = 'flex';
+            })
             // card.id = data[occupation][key].id;
     
-            var title = document.createElement('h4');
+            const title = document.createElement('h4');
             title.innerHTML = data[occupation][key].name;
     
-            var img = document.createElement('img');
+            const img = document.createElement('img');
             img.src = data[occupation][key].img;
             img.classList.add(data[occupation][key].imgClass);
             img.alt = data[occupation][key].name;
+            console.log(data[occupation][key].id);
+
+            const modal = createModal(data[occupation][key])
 
             card.appendChild(title);
             card.appendChild(img);
             container.appendChild(card);
+            container.appendChild(modal);
         }
     }
 })(data);
 
 
 // Modal customization
-const openButton = document.querySelectorAll("[data-open-modal]")
-const closeButton = document.querySelector("[data-close-modal]");
-const modal = document.querySelector("[data-modal");
+// const openButton = document.querySelectorAll("[data-open-modal]")
+// const closeButton = document.querySelector("[data-close-modal]");
+// const modal = document.querySelector("[data-modal");
 
-openButton.forEach((btn) => {
-    btn.addEventListener("click", () => {
-        modal.showModal();
-        modal.style.display = 'flex';
-    })
-})
 
-closeButton.addEventListener("click", () => {
-    modal.close();
-    modal.style.display = 'none'
-})
-
-modal.addEventListener("click", e => {
-    const dialogDimensions = modal.getBoundingClientRect();
-    if (
-        e.clientX < dialogDimensions.left ||
-        e.clientX > dialogDimensions.right || 
-        e.clientY < dialogDimensions.top ||
-        e.clientY > dialogDimensions.bottom
-    ) {
-        modal.close();
-        modal.style.display = 'none'
-    }
-})
+// modal.addEventListener("click", e => {
+//     const dialogDimensions = modal.getBoundingClientRect();
+//     if (
+//         e.clientX < dialogDimensions.left ||
+//         e.clientX > dialogDimensions.right || 
+//         e.clientY < dialogDimensions.top ||
+//         e.clientY > dialogDimensions.bottom
+//     ) {
+//         modal.close();
+//         modal.style.display = 'none'
+//     }
+// })
 
 
 
