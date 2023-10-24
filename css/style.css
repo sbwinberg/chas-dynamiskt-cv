@@ -214,6 +214,9 @@ footer{
 
 /* CARD HOVER */
 @media screen and (min-width: 1000px) {
+    .title {
+        font-size: 70px;
+    }
     footer {
         justify-content: space-around;
     }

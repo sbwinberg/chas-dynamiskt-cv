@@ -32,7 +32,39 @@ img {
     text-align: center;
 }
 
+/* .footer-links {
+    width: 70%;
+    padding: .5rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
 
+    &::before,
+    &::after {
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+    }
+    &::before {
+        background: white;
+        z-index: -1;
+        top: 0;
+        left: -1rem;
+        right: -1rem;
+        height: 101%;
+    }
+
+    &::after {
+        background-color: var(--primary-color);
+        width: 100vw;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        z-index: -2;
+    }
+} */
 
 
 

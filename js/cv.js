@@ -1,30 +1,10 @@
 import data from "../files/education.json" assert { type: 'json'};
-const menu = document.querySelector('.menu');
-const menuItems = document.querySelectorAll('.menu-item');
-const hamburger = document.querySelector('.hamburger');
-const closeIcon = document.querySelector('.closeIcon');
-const menuIcon = document.querySelector('.menuIcon');
-
 
 function addGlobalEventListener(type, selector, callback) {
     document.addEventListener(type, e => {
         if(e.target.matches(selector)) callback(e);
     })
 };
-
-// Buttons and menu
-function toggleMenu() {
-    if(menu.classList.contains('showMenu')) {
-        menu.classList.remove('showMenu');
-        closeIcon.style.display = 'none';
-        menuIcon.style.display = 'block';
-    } else {
-        menu.classList.add('showMenu');
-        closeIcon.style.display = 'block';
-        menuIcon.style.display = 'none';
-    }
-};
-hamburger.addEventListener('click', toggleMenu);
 
 const createModal = ((data) => {
     const modal = document.createElement('dialog');
