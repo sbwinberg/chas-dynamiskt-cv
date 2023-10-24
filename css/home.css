@@ -1,16 +1,13 @@
 .home {
-    font-weight: bold;
+    text-decoration: underline;
 }
 
 /* PROFILE */
 img {
-    width: 100%;
+    width: min(500px, 100%);
 }
 .profile-text {
     padding: var(--default-padding);
-} 
-.profile-text em {
-    text-indent: 20px;
 }
 .author {
     text-align: center;
@@ -18,7 +15,7 @@ img {
     font-size: small;
 }
 .profile-section {
-    padding: var(--default-padding) 0;
+    padding-top: var(--default-padding);
     margin: auto;
     border-bottom: 2px solid var(--primary-color);
     display: flex;
@@ -27,21 +24,34 @@ img {
 
 /* PROJECTS */
 .project-section {
-    padding: var(--default-padding) 0;
+    padding-top: var(--default-padding);
 }
 .project-section h2 {
     background-color: var(--primary-color);
     color: white;
     text-align: center;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 .project-cards {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--default-padding);
-    padding-top: var(--default-padding);
+    grid-template-columns: repeat(auto-fit, minmax(min(160px, 100%), 1fr));
+    gap: var(--mobile-padding);
+    padding: var(--default-padding) var(--mobile-padding);
+    justify-items: center;
 }
 .card {
-    width: 100%;
     aspect-ratio: 1/1.2;
     padding: var(--default-padding);
     border: 1px solid black;
@@ -59,7 +69,7 @@ img {
     border-radius: 5px;
 }
 .tic-tac-toe {
-    width: 70%;
+    width: 60%;
 }
 
 @media screen and (min-width: 1000px) {
@@ -76,16 +86,16 @@ img {
         overflow: scroll;
     }
     /* PROJECTS */
-    .cards {
-        grid-template-columns: repeat(4, 1fr);
-        padding: var(--default-padding);
-        padding-bottom: 0;
+
+    .project-cards {
+        gap: 2rem;
+        margin: 1rem 2rem;
     }
     .card a:hover{
         background-color: white;
         color: black;
         box-shadow: var(--card-shadow);
-        transition: background-color .2s, color .2s, box-shadow .2s;
+        transition: all .2s;
     }
     .card a{
         width: 30%;

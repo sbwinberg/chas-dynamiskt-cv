@@ -1,5 +1,5 @@
 .contact {
-    font-weight: bold;
+    text-decoration: underline;
 }
 main {
     display: flex;
