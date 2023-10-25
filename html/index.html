@@ -17,20 +17,20 @@
 </head>
 <body>
     <header>
-        <h1 class="title">Emil Winberg</h1>
+        <h1 class="title bannerStyle">Emil Winberg</h1>
     </header>
     <div class="navLinks">
         <nav class="full-screen-nav">
             <div class="backdrop">
                 <ul>
                     <li>
-                        <a href="./index.html" class="home"><i class="material-icons">home</i>Hem</a>
+                        <a href="./index.html" class="home"><i class="material-icons md-36 inline-icon">home</i>Hem</a>
                     </li>
                     <li>
-                        <a href="./cv.html" class="cv"><i class="material-icons">person</i>CV</a>
+                        <a href="./cv.html" class="cv"><i class="material-icons md-36 inline-icon">person</i>CV</a>
                     </li>
                     <li>
-                        <a href="./contact.html" class="contact"><i class="material-icons">chat</i>Kontakt</a>
+                        <a href="./contact.html" class="contact"><i class="material-icons md-36 inline-icon">chat</i>Kontakt</a>
                     </li>
                 </ul>
             </div>
@@ -41,16 +41,22 @@
     </div>
     <main>
         <section class="profile-section">
-            <figure><img src="../images/profile-picture.jpeg" alt="profile-picture"></figure>
-            <p class="profile-text">
-                Jag är en glad, engagerad och nyfiken kille som älskar att utforska världen omkring mig. Med ett ständigt leende på läpparna tar jag varje dag som en ny möjlighet att lära och växa. Mitt engagemang sträcker sig från mina intressen och hobbies till att stödja och inspirera de människor jag har runt mig. <br><br>
-                Min nyfikenhet är mitt driv, och jag älskar att fördjupa mig i nya ämnen och utmana mig själv att förstå mer. Oavsett om det handlar om att utforska okända platser, lära mig nya färdigheter eller bara lyssna på andra människors berättelser, så brinner jag för att lära och utvecklas.<br><br>
-                Jag tror på att sprida glädje och positivitet i mitt liv och omgivning. Att vara glad är smittsamt, och jag strävar efter att sprida den glädjen till de människor jag möter varje dag. Mitt engagemang och nyfikenhet driver mig att upptäcka nya möjligheter och dela min entusiasm med världen omkring mig.<br><br>
-                <span class="author">- ChatGPT, om Emil</span></p>
-                
+            <figure class="image-wrapper">
+                <a href="./cv.html"><button>Vad gör jag?</button></a>
+                <img src="../images/profile-picture.jpeg" alt="profile-picture">
+            </figure>
+            <div class="text-wrapper">
+                <p class="profile-text">
+                    Jag är en glad, engagerad och nyfiken kille som älskar att utforska världen omkring mig. Med ett ständigt leende på läpparna tar jag varje dag som en ny möjlighet att lära och växa. Mitt engagemang sträcker sig från mina intressen och hobbies till att stödja och inspirera de människor jag har runt mig. <br><br>
+                    Min nyfikenhet är mitt driv, och jag älskar att fördjupa mig i nya ämnen och utmana mig själv att förstå mer. Oavsett om det handlar om att utforska okända platser, lära mig nya färdigheter eller bara lyssna på andra människors berättelser, så brinner jag för att lära och utvecklas.<br><br>
+                    Jag tror på att sprida glädje och positivitet i mitt liv och omgivning. Att vara glad är smittsamt, och jag strävar efter att sprida den glädjen till de människor jag möter varje dag. Mitt engagemang och nyfikenhet driver mig att upptäcka nya möjligheter och dela min entusiasm med världen omkring mig.<br><br>
+                    <span class="author">- ChatGPT, om Emil</span></p>
+            </div>
         </section>
         <section class="project-section">
-            <h2>Projekt</h2>
+            <div class="banner">
+                <h2 class="bannerStyle">Projekt</h2>
+            </div>
             <div class="project-cards">
                 <div class="card">
                     <h3>Landing page</h3>
@@ -76,7 +82,7 @@
         </section>
     </main>
     <footer>
-        <div class="footer-links">
+        <div class="footer-links bannerStyle">
             <a href="https://www.linkedin.com/in/emil-winberg-028965123/"><img src="../images/iconmonstr-linkedin-3.svg" alt="Linked-in"></a>
             <a href="mailto:emil.winberg@chasacademy.se"><img src="../images/Gmail_icon_(2020).svg.png" alt="Email"></a>
             <a href="https://github.com/sbwinberg"><img src="../images/github-mark.svg" alt="GitHub"></a>
@@ -89,8 +95,6 @@
 
 
 
-
-<!-- STYLE HEADER WITH BIG NAME AND MENU UNDERNEATH -->
 <!-- STYLE CARDS WITH FADING BORDER, GRAY BACKGROUND, FULL IMAGE AND LINKS -->
 <!-- FIX PROFILE SECTION STYLING AND RESPONSIVENESS -->
 <!-- STYLE PROJECT BORDER TO MATCH HEADER -->

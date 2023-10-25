@@ -1,13 +1,8 @@
+/* UNIVERSAL STYLES AND SET-UP */
 @font-face {
     font-family: "Gabarito";
     src: url();
 }
-.material-icons.md-18 { font-size: 18px; }
-.material-icons.md-24 { font-size: 24px; }
-.material-icons.md-36 { font-size: 36px; }
-.material-icons.md-48 { font-size: 48px; }
-.material-icons.white { color: white }
-
 :root{ 
     --primary-color: lightblue;
     --secondary-color: #0c2c776c;
@@ -34,6 +29,48 @@ body{
     flex-direction: column;
     justify-content: space-between;
 }
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+.material-icons.white { color: white }
+
+/* RE-USED STYLES */
+.bannerStyle {
+    &::before,
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+    }
+    &::before {
+        background: white;
+        z-index: -1;
+        top: -1px;
+        bottom: -1px;
+        left: -1rem;
+        right: -1rem;
+    }
+    &::after {
+        background-color: var(--primary-color);
+        height: 100%;
+        width: 100vw;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        z-index: -2;
+    }
+}
+.banner {
+    margin: 1em 0;
+    display: flex;
+    justify-content: center;
+}
+.banner h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    position: relative;
+}
 
 /* HEADER */
 header {
@@ -45,33 +82,6 @@ header {
     font-size: 40px;
     position: relative;
     color: var(--primary-color);
-    /* display: inline-block; */
-
-    &::before,
-    &::after {
-        content: '';
-        display: block;
-        position: absolute;
-    }
-
-    &::before {
-        background: white;
-        z-index: -1;
-        top: -1px;
-        bottom: -1px;
-        left: -1rem;
-        right: -1rem;
-    }
-
-    &::after {
-        background-color: var(--primary-color);
-        height: 100%;
-        width: 100vw;
-        left: 50%;
-        top: 0;
-        transform: translateX(-50%);
-        z-index: -2;
-    }
 }
 
 /* NAVIGATION MENU */
@@ -79,7 +89,6 @@ header {
     display: flex;
     justify-content: center;
 }
-
 .trigger {
     display: flex;
     justify-content: center;
@@ -91,7 +100,6 @@ header {
     width: 3rem;
     border-radius: 5px;
 }
-
 .full-screen-nav {
     position: absolute;
     top: 0;
@@ -101,54 +109,35 @@ header {
     transition: .25s ease-out;
     display: none;
 }
-
 .open-nav {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .backdrop{
     position: absolute;
     width: 100%;
     height: 100%;
     background: rgb(0 0 0 / .95);
     animation: fadeIn .25s ease-out forwards;
+    z-index: 98;
 }
-
-@keyframes fadeIn {
-    from {
-        top: -100%;
-        opacity: 0;
-    } to {
-        top: 0;
-        opacity: 1;
-    }
-}
-
 ul {
     z-index: 99;
     position: relative;
+    top: 40%;
+    transform: translateY(-50%);
 }
 ul li {
     list-style: none;
     text-align: center;
+    transform: translateX(-1rem); /* För att centrera texten och inte hela a */
     margin-bottom: 2rem;
     animation: .25s ease-out animateList forwards;
 }
 ul li:last-child{
     margin-bottom: 0;
 }
-@keyframes animateList {
-   from {
-    margin-top: -60px;
-    opacity: 0;
-   } to {
-    margin-top: 60px;
-    opacity: 1;
-   }
-}
-
 ul li a {
 	text-decoration: none;
 	color: #ccc;
@@ -160,6 +149,30 @@ ul li a {
 ul li a:hover,
 ul li a i {
 	color: var(--primary-color);
+}
+.inline-icon {
+    vertical-align: middle;
+    margin-right: 1rem;
+}
+
+/* KEYFRAMES */
+@keyframes animateList {
+   from {
+    margin-top: -4rem;
+    opacity: 0;
+   } to {
+    margin-top: 2rem;
+    opacity: 1;
+   }
+}
+@keyframes fadeIn {
+    from {
+        top: -100%;
+        opacity: 0;
+    } to {
+        top: 0;
+        opacity: 1;
+    }
 }
 
 /* MAIN */
@@ -177,7 +190,6 @@ footer{
     height: 2rem;
     width: auto;
 }
-
 .footer-links {
     width: 70%;
     padding: .5rem;
@@ -185,34 +197,9 @@ footer{
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-
-    &::before,
-    &::after {
-        content: '';
-        display: block;
-        height: 100%;
-        position: absolute;
-    }
-    &::before {
-        background: white;
-        z-index: -1;
-        top: 0;
-        left: -1rem;
-        right: -1rem;
-        height: 101%;
-    }
-
-    &::after {
-        background-color: var(--primary-color);
-        width: 100vw;
-        left: 50%;
-        top: 0;
-        transform: translateX(-50%);
-        z-index: -2;
-    }
 }
 
-/* CARD HOVER */
+/* UNIVERSAL MEDIA-QUERY FOR DESKTOP */
 @media screen and (min-width: 1000px) {
     .title {
         font-size: 70px;

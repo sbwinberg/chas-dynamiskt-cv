@@ -27,11 +27,6 @@ main{
     border-bottom: 2px solid var(--primary-color);
     margin-bottom: var(--default-padding);
 }
-.education h2,
-.jobs h2 {
-    text-align: center;
-    padding-bottom: var(--default-padding);
-}
 .cards {
     display: flex;
     flex-wrap: wrap;
