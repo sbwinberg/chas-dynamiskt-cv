@@ -93,13 +93,13 @@ body{
     }
 }
 .banner {
-    margin: 6vh 0;
+    margin: calc(1em + 2vw) 0;
     display: flex;
     justify-content: center;
 }
 .banner h2 {
     color: var(--primary-color);
-    font-size: 2rem;
+    font-size: calc(1.5rem + 1vw);
     position: relative;
 }
 
@@ -110,7 +110,7 @@ header {
     justify-content: center;
 }
 .title{
-    font-size: calc(2rem + 2vw);
+    font-size: calc(2.5rem + 2vw);
     position: relative;
     color: var(--primary-color);
 }
@@ -132,13 +132,14 @@ header {
     border-radius: 5px;
 }
 .full-screen-nav {
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     transition: .25s ease-out;
     display: none;
+    z-index: 1;
 }
 .open-nav {
     display: flex;

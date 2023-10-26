@@ -21,9 +21,11 @@
 }
 .profile-text {
     font-size: 1.25rem;
+    line-height: 1.5;
 }
 .profile-section {
-    padding: 6vh var(--default-padding);
+    margin: calc(1em + 2vw) 0;
+    padding: 0 1rem calc(1rem + 2vw);
     border-bottom: 2px solid var(--primary-color);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -38,7 +40,7 @@
 
 /* PROJECTS */
 .project-section {
-    margin: 6vh 0;
+    margin: calc(1em + 2vw) 0;
 }
 .project-cards {
     display: grid;
