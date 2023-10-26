@@ -9,14 +9,15 @@ main{
     justify-content: start;
 }
 .about {
-    padding: var(--default-padding) ;
+    width: 100%;
+    padding: 0 1rem calc(1rem + 2vw);
     border-bottom: 2px solid var(--primary-color);
-    max-width: 700px;
-    margin: var(--default-padding) auto;
 }
 .about p {
+    max-width: 700px;
     line-height: 1.5;
-    padding: var(--default-padding) 0;
+    font-size: 1.25rem;
+    margin: 0 auto;
 }
 .about h2 {
     text-align: center;
@@ -26,6 +27,9 @@ main{
 .education {
     border-bottom: 2px solid var(--primary-color);
     margin-bottom: var(--default-padding);
+}
+.jobs {
+    padding: 0 1rem calc(1rem + 2vw);
 }
 .cards {
     display: flex;
