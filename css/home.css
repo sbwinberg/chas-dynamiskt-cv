@@ -2,102 +2,49 @@
     text-decoration: underline;
 }
 
-
-
-
-
-
-
 /* PROFILE */
 .image-wrapper,
 .text-wrapper {
-    width: min(600px, 100%);
-    height: 99%;
+    width: min(700px, 100%);
     overflow: hidden;
-}
-.image-wrapper {
-    background: black;
-    position: relative;
 }
 .image-wrapper img {
     width: 100%;
+    /* scale: 1.1; */
+    display: block;
     object-fit: cover;
     transition: .3s;
 }
-.image-wrapper button {
-    font-size: 1.5rem;
-    font-weight: 900;
-    padding: 1rem 3rem;
-    background-color: white;
-    outline: 0;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 0 10px black;
-}
-.image-wrapper a {
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: .3s;
-    opacity: 0; /* change after styling */
-}
-.image-wrapper a:hover button{
-    scale: 1.05;
-    background-color: var(--primary-color);
-    box-shadow: 0 0 20px black;
-    transition: all .2s;
-}
-.image-wrapper a:active button {
-    scale: 1;
-    background-color: white;
-    box-shadow: inset 0 0 5px black;
-    transition: all 0s;
-}
-.image-wrapper:hover img {
-    transform: scale(1.2) translateY(35px);
-    opacity: .6;
-}
-.image-wrapper:hover a {
-    opacity: 1;
-}
-.profile-text {
-    padding: var(--default-padding);
-}
 .author {
-    text-align: center;
     font-style: italic;
     font-size: small;
 }
-.profile-section {
-    padding: 6rem 0;
-    margin: auto;
-    border-bottom: 2px solid var(--primary-color);
-    display: flex;
-    flex-direction: column;
+.profile-text {
+    font-size: 1.25rem;
 }
-
-
-
-
-
-
-
-
-
-
+.profile-section {
+    padding: 6vh var(--default-padding);
+    border-bottom: 2px solid var(--primary-color);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--default-padding);
+    justify-content: center;
+    justify-items: center;
+}
+.image-wrapper button,
+.image-wrapper a {
+    display: none;
+}
 
 /* PROJECTS */
 .project-section {
-    padding-top: var(--default-padding);
+    margin: 6vh 0;
 }
 .project-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(160px, 100%), 1fr));
     gap: var(--mobile-padding);
-    padding: var(--default-padding) var(--mobile-padding);
-    justify-items: center;
+    padding: 0 var(--mobile-padding);
 }
 .card {
     aspect-ratio: 1/1.2;
@@ -124,23 +71,58 @@
 }
 
 /* DESKTOP MEDIA-QUERY */
-@media screen and (min-width: 1000px) {
+@media screen and (width >= 1000px) {
     /* PROFILE */
-    .profile-section {
-        max-width: 90%;
-        border-bottom: none;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
-        align-items: center;
+    .image-wrapper {
+        background: rgb(31, 30, 30);
+        height: fit-content;
+        position: relative;
     }
-    .profile-section p {
-        max-height: 350px;
-        overflow: scroll;
+    .image-wrapper button {
+        font-size: 1.5rem;
+        font-weight: 900;
+        padding: 1rem 3rem;
+        background-color: white;
+        outline: 0;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 0 10px black;
+        display: block;
+    }
+    .image-wrapper a {
+        text-decoration: none;
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: .3s;
+        opacity: 0; /* change after styling */
+        display: block;
+    }
+    .image-wrapper a:hover button{
+        scale: 1.05;
+        background-color: var(--primary-color);
+        box-shadow: 0 0 20px black;
+        transition: all .2s;
+    }
+    .image-wrapper a:active button {
+        scale: 1;
+        background-color: white;
+        box-shadow: inset 0 0 5px black;
+        transition: all 0s;
+    }
+    .image-wrapper:hover img {
+        transform: scale(1.2) translateY(5%);
+        opacity: .4;
+    }
+    .image-wrapper:hover a {
+        opacity: 1;
     }
     /* PROJECTS */
     .project-cards {
-        gap: 2rem;
-        margin: 1rem 2rem;
+        gap: 2vw;
+        margin: 0 2vw;
     }
     .card a:hover{
         background-color: white;
