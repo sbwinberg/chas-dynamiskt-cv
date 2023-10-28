@@ -1,7 +1,11 @@
 .home {
     text-decoration: underline;
 }
-
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 /* PROFILE */
 .image-wrapper,
 .text-wrapper {
@@ -19,7 +23,7 @@
     font-size: small;
 }
 .profile-text {
-    font-size: 1.25rem;
+    font-size: 1rem;
     line-height: 1.5;
 }
 .profile-section {
@@ -41,11 +45,24 @@
 .project-section {
     margin: calc(1em + 2vw) 0;
 }
-.project-cards {
+/* .project-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(160px, 100%), 1fr));
     gap: var(--mobile-padding);
     padding: 0 var(--mobile-padding);
+} */
+.media-scroller {
+    display: grid;
+    gap: var(--default-padding);
+    grid-auto-flow: column;
+    grid-auto-columns: 54%;
+
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    padding-left: var(--default-padding);
+
+    scroll-snap-type: inline mandatory;
+    scroll-padding: var(--default-padding, 1rem);
 }
 .card {
     aspect-ratio: 1/1.2;
@@ -56,6 +73,8 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    /* box-shadow: 0 0 2px 1px; */
+    scroll-snap-align: start;
 }
 .card img {
     width: 60%;
