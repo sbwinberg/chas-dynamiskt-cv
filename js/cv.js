@@ -75,7 +75,7 @@ const renderCards = ((data) => {
 
         for(const key in data[occupation]){
             const card = document.createElement('button');
-            card.className = 'card' + ' '  + (data[occupation][key].id.toString());
+            card.className = 'card hover-frame'
             card.setAttribute("data-open-modal", '');
             card.addEventListener("click", () => {
                 modal.showModal();

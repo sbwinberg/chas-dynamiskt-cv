@@ -26,7 +26,8 @@ main{
 /* CARDS */
 .education {
     border-bottom: 2px solid var(--primary-color);
-    margin-bottom: var(--default-padding);
+    margin-bottom: calc(1em + 2vw) 0;
+    padding: 0 1rem calc(1rem + 2vw);
 }
 .jobs {
     padding: 0 1rem calc(1rem + 2vw);
@@ -36,12 +37,11 @@ main{
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
-    padding-bottom: var(--default-padding);
 }
 .card {
     background-color: white;
-    padding: var(--default-padding);
-    flex: 0 1 calc(50% - 1rem);
+    padding: 2rem var(--default-padding);
+    flex-basis: calc(50% - .5rem);
     max-width: 250px;
     aspect-ratio: 1/1.2;
     border: 1px solid black;

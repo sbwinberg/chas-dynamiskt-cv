@@ -20,14 +20,9 @@
     font-family: 'Gabarito';
     line-height: 1.2;
 }
-html {
-    min-height: 100%;
-}
-body{
+html,
+body {
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
@@ -61,7 +56,6 @@ body{
         z-index: -2;
     }
 }
-
 @media screen and (width > 1000px) {
     .hover-frame {
         &::before,
@@ -219,7 +213,7 @@ footer{
     justify-content: center;
 }
 .footer-links img {
-    height: 2.5rem;
+    height: calc(2rem + .5vw);
     width: auto;
 }
 .footer-links {

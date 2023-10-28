@@ -1,12 +1,6 @@
 .contact {
     text-decoration: underline;
 }
-main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
 
 /* INFO */
 .contact-info > * {
@@ -32,10 +26,6 @@ main a:hover {
 }
 
 /* MESSAGE */
-.message {
-    /* max-width: 350px; */
-    padding: var(--default-padding);
-}
 .message-form {
     display: flex;
     flex-direction: column;
@@ -58,9 +48,6 @@ input:invalid {
 }
 
 @media screen and (min-width: 1000px) {
-    main{
-        gap: 10rem;
-    }
     .contact-info, .message {
         height: 400px;
         width: 400px;
