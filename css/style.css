@@ -237,13 +237,12 @@ footer{
         box-shadow: inset 0 0 5px black;
     }
     .card:hover {
-        scale: 1.01;
         background-color: var(--secondary-color);
         box-shadow: var(--card-shadow);
         transition: all .2s;
     }
     footer img:hover{
-        scale: 1.2;
+        scale: 1.1;
         transition: scale .2s;
     }
     .footer-links {

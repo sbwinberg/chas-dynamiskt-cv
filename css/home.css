@@ -9,8 +9,8 @@
 /* PROFILE */
 .image-wrapper,
 .text-wrapper {
-    width: min(700px, 100%);
-    overflow: hidden;
+    width: min(700px, 95%);
+    overflow: hidden;  
 }
 .image-wrapper img {
     width: 100%;
@@ -23,7 +23,7 @@
     font-size: small;
 }
 .profile-text {
-    font-size: 1rem;
+    font-size: clamp(.5rem, 1vw + 1rem, 1.5rem);
     line-height: 1.5;
 }
 .profile-section {
@@ -33,7 +33,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: var(--default-padding);
-    justify-content: center;
     justify-items: center;
 }
 .image-wrapper div,
@@ -45,24 +44,29 @@
 .project-section {
     margin: calc(1em + 2vw) 0;
 }
-/* .project-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(160px, 100%), 1fr));
-    gap: var(--mobile-padding);
-    padding: 0 var(--mobile-padding);
-} */
 .media-scroller {
     display: grid;
     gap: var(--default-padding);
     grid-auto-flow: column;
-    grid-auto-columns: 54%;
-
+    grid-auto-columns: 56%;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
     padding-left: var(--default-padding);
-
-    scroll-snap-type: inline mandatory;
+    scroll-snap-stop: normal;
+    scroll-behavior: smooth;
     scroll-padding: var(--default-padding, 1rem);
+    cursor: pointer;
+}
+.media-scroller.active {
+    cursor: grab;
+}
+/* Scollbars */
+.project-cards {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.project-cards::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
 }
 .card {
     aspect-ratio: 1/1.2;
@@ -73,8 +77,6 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    /* box-shadow: 0 0 2px 1px; */
-    scroll-snap-align: start;
 }
 .card img {
     width: 60%;
@@ -93,6 +95,7 @@
 /* DESKTOP MEDIA-QUERY */
 @media screen and (width >= 1000px) {
     /* PROFILE */
+
     .image-wrapper {
         background: rgb(31, 30, 30);
         height: fit-content;
@@ -121,15 +124,13 @@
         opacity: 0; /* change after styling */
         display: block;
     }
-    .image-wrapper a:hover button{
+    .image-wrapper a:hover{
         scale: 1.05;
-        background-color: var(--primary-color);
         box-shadow: 0 0 20px black;
         transition: all .2s;
     }
-    .image-wrapper a:active button {
+    .image-wrapper a:active {
         scale: 1;
-        background-color: white;
         box-shadow: inset 0 0 5px black;
         transition: all 0s;
     }
@@ -141,6 +142,9 @@
         opacity: 1;
     }
     /* PROJECTS */
+    .media-scroller{
+        grid-auto-columns: 21%;
+    }
     .project-cards {
         gap: 2vw;
         margin: 0 2vw;
@@ -155,5 +159,11 @@
         width: 30%;
         padding: 0.5rem;
         text-align: center;
+    }
+}
+
+@media screen and (500px <= width < 1000px){
+    .media-scroller{
+        grid-auto-columns: 36%;
     }
 }
