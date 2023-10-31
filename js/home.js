@@ -1,7 +1,8 @@
+// GITHUB REPO API
 (async () => {
     const response = await fetch('https://api.github.com/users/sbwinberg/repos');
-    const repoJson = await response.json();
-    console.log(repoJson);
+    const projects = await response.json();
+    console.log(projects);
 })();
 
 
@@ -35,3 +36,10 @@ slider.addEventListener("mousedown", dragStart);
 slider.addEventListener("mouseup", dragStop);
 slider.addEventListener("mouseleave", leave);
 slider.addEventListener("mousemove", dragging);
+
+
+//Render Project cards
+const renderCards = (projects) => {
+    const header = document.createElement('h2');
+    const description = document.createElement('p');
+}

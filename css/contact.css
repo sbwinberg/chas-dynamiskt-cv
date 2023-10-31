@@ -24,7 +24,6 @@ main a:hover {
     color: var(--secondary-color);
     transition: color .2s;
 }
-
 /* MESSAGE */
 .message-form {
     display: flex;

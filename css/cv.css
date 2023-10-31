@@ -65,9 +65,8 @@ main{
     filter: saturate(0%) brightness(70%) contrast(1000%);
 }
 dialog {
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
+    inset: 50% 50% auto auto;
+    translate: 50% -50%;
     height: fit-content;
     width: 90%;
     max-width: 400px;
@@ -97,8 +96,7 @@ dialog p {
 }
 .close {
     position: absolute;
-    top: 0;
-    right: 0;
+    inset: 0 0 auto auto;
     background-color: transparent;
     border: none;
 }

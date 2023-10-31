@@ -1,6 +1,88 @@
-/* HOME */
-@media screen and (width >= 1000px) {
-    /* profile picture */
+@media screen and (700px <= width < 1000px){
+    .media-scroller{
+        grid-auto-columns: 36%;
+    }
+}
+@media screen and (width > 2000px){
+    .media-scroller{
+        margin: 0 auto;
+        grid-auto-columns: 15%;
+    }
+}
+
+@media screen and (2000px >= width >= 1000px) {
+/* IMAGE HOVER-FRAMES */
+    .hover-frame {
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 1.25rem;
+            bottom: 1.25rem;
+            left: 1.25rem;
+            right: 1.25rem;
+        }
+        &::before {
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+            transform: scale(0, 1);
+            transition: transform ease-out .25s;
+        }
+        &:hover::before {
+            transform: scale(1.05, 1);
+        }
+        &::after{
+            border-left: 1px solid white;
+            border-right: 1px solid white;
+            transform: scale(1, 0);
+            transition: transform ease-out .25s;
+        }
+        &:hover::after {
+            transform: scale(1, 1.05);
+        }
+    }
+    /* *************** */
+    /* PROFILE PIC/BUTTON HOVER + FOOTER LOOKS */
+    .trigger:hover {
+        scale: 1.1;
+        box-shadow: 0 0 5px black;
+        transition: all .2s;
+    }
+    .trigger:active {
+        scale: 1;
+        box-shadow: inset 0 0 5px black;
+    }
+    .card:hover {
+        background-color: var(--secondary-color);
+        box-shadow: var(--card-shadow);
+        transition: all .2s;
+    }
+    footer img:hover{
+        scale: 1.1;
+        transition: scale .2s;
+    }
+    .footer-links {
+        width: 50%;
+    }
+    /* ************************************* */
+    /* CONTACT PAGE CARDS */
+    .contact-info, .message {
+        height: 400px;
+        width: 400px;
+        padding: var(--default-padding);
+        border: 1px solid black;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.384);
+    }
+    /* ***************** */
+    /* CV-CARD HOVER */
+    .card:active {
+        scale: 0.98;
+        box-shadow: inset 0 0 5px;
+        transition: all 0s;
+    }
+    /* ************* */
+    /* PROFILE PICTURE */
     .image-wrapper {
         background: rgb(31, 30, 30);
         height: fit-content;
@@ -46,9 +128,10 @@
     .image-wrapper:hover a {
         opacity: 1;
     }
+    /* ********** */
     /* PROJECTS */
     .media-scroller{
-        grid-auto-columns: 21%;
+        grid-auto-columns: 27%;
     }
     .project-cards {
         gap: 2vw;
@@ -65,31 +148,5 @@
         padding: 0.5rem;
         text-align: center;
     }
-}
-@media screen and (500px <= width < 1000px){
-    .media-scroller{
-        grid-auto-columns: 36%;
-    }
-}
-
-/* CV */
-@media screen and (width >= 1000px) {
-    .card:active {
-        scale: 0.98;
-        box-shadow: inset 0 0 5px;
-        transition: all 0s;
-    }
-}
-
-/* CONTACT */
-@media screen and (width >= 1000px) {
-    .contact-info, .message {
-        height: 400px;
-        width: 400px;
-        padding: var(--default-padding);
-        border: 1px solid black;
-        border-radius: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.384);
-    }
-
+    /* ******** */
 }

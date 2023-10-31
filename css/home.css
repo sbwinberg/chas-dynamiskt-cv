@@ -1,3 +1,8 @@
+* {
+    /* outline: 1px solid red; */
+    /* background: rgb(100 100 100 /.05); */
+}
+
 .home {
     text-decoration: underline;
 }
@@ -10,6 +15,20 @@
 .image-wrapper,
 .text-wrapper {
     width: min(700px, 95%);
+
+
+
+
+
+
+    /* PROBLEM WITH SMALL SS */
+    /* outline: 1px solid red; */
+
+
+
+
+
+    
     overflow: hidden;  
 }
 .image-wrapper img {
@@ -23,7 +42,7 @@
     font-size: small;
 }
 .profile-text {
-    font-size: clamp(.5rem, 1vw + 1rem, 1.5rem);
+    font-size: clamp(.1rem, 5vw, 1.25rem);
     line-height: 1.5;
 }
 .profile-section {
@@ -52,12 +71,12 @@
     overscroll-behavior-inline: contain;
     padding-left: var(--default-padding);
     scroll-snap-stop: normal;
-    scroll-behavior: smooth;
     scroll-padding: var(--default-padding, 1rem);
     cursor: pointer;
 }
 .media-scroller.active {
     cursor: grab;
+    /* scroll-behavior: smooth; */
 }
 .project-cards {
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
