@@ -1,31 +1,31 @@
 .contact {
     text-decoration: underline;
 }
-
-/* INFO */
-.contact-info > * {
-    padding-bottom: var(--default-padding);
-    text-decoration: none;
-    color: black;
-    max-width: fit-content;
-} 
-.contact-info{
-    padding: var(--default-padding);
-    border-bottom: 2px solid var(--primary-color);
+html, 
+body {
+    height: 100vh;
+}
+body {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
 }
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-info {
+    font-size: clamp(1rem, 1rem + 2.5vw, 1.5rem);
+}
+/* INFO */
 main img {
     height: 2rem;
     vertical-align: middle;
     margin-right: var(--default-padding);
 }
-/* main a:hover {
-    color: var(--secondary-color);
-    transition: color .2s;
-} */
 /* MESSAGE */
-.message-form {
+#message-form {
     display: flex;
     flex-direction: column;
     gap: var(--default-padding);

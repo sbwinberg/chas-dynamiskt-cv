@@ -62,14 +62,14 @@
     }
     /* ************************************* */
     /* CONTACT PAGE CARDS */
-    .contact-info, .message {
+    /* .contact-info, .message {
         height: 400px;
         width: 400px;
         padding: var(--default-padding);
         border: 1px solid black;
         border-radius: 20px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.384);
-    }
+    } */
     /* ***************** */
     /* CV-CARD HOVER */
     .card:hover {
@@ -82,6 +82,10 @@
         scale: 0.98;
         box-shadow: inset 0 0 5px;
         transition: all 0s;
+    }
+    .close:hover {
+        cursor: pointer;
+        color: rgba(0, 0, 0, 0.61);
     }
     /* ************* */
     /* PROFILE PICTURE */
