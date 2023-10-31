@@ -39,7 +39,6 @@
 .image-wrapper a {
     display: none;
 }
-
 /* PROJECTS */
 .project-section {
     margin: calc(1em + 2vw) 0;
@@ -60,7 +59,6 @@
 .media-scroller.active {
     cursor: grab;
 }
-/* Scollbars */
 .project-cards {
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
@@ -90,80 +88,4 @@
 }
 .tic-tac-toe {
     width: 60%;
-}
-
-/* DESKTOP MEDIA-QUERY */
-@media screen and (width >= 1000px) {
-    /* PROFILE */
-
-    .image-wrapper {
-        background: rgb(31, 30, 30);
-        height: fit-content;
-        position: relative;
-    }
-    .image-wrapper div {
-        font-size: 1.5rem;
-        font-weight: 900;
-        padding: 1rem 3rem;
-        background-color: white;
-        color: black;
-        outline: 0;
-        border: none;
-        border-radius: 10px;
-        box-shadow: 0 0 10px black;
-        display: block;
-    }
-    .image-wrapper a {
-        text-decoration: none;
-        position: absolute;
-        z-index: 1;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        transition: .3s;
-        opacity: 0; /* change after styling */
-        display: block;
-    }
-    .image-wrapper a:hover{
-        scale: 1.05;
-        box-shadow: 0 0 20px black;
-        transition: all .2s;
-    }
-    .image-wrapper a:active {
-        scale: 1;
-        box-shadow: inset 0 0 5px black;
-        transition: all 0s;
-    }
-    .image-wrapper:hover img {
-        transform: scale(1.2) translateY(5%);
-        opacity: .4;
-    }
-    .image-wrapper:hover a {
-        opacity: 1;
-    }
-    /* PROJECTS */
-    .media-scroller{
-        grid-auto-columns: 21%;
-    }
-    .project-cards {
-        gap: 2vw;
-        margin: 0 2vw;
-    }
-    .card a:hover{
-        background-color: white;
-        color: black;
-        box-shadow: var(--card-shadow);
-        transition: all .2s;
-    }
-    .card a{
-        width: 30%;
-        padding: 0.5rem;
-        text-align: center;
-    }
-}
-
-@media screen and (500px <= width < 1000px){
-    .media-scroller{
-        grid-auto-columns: 36%;
-    }
 }
