@@ -9,7 +9,6 @@
         grid-auto-columns: 15%;
     }
 }
-
 @media screen and (2000px >= width >= 1000px) {
 /* IMAGE HOVER-FRAMES */
     .hover-frame {
@@ -61,16 +60,6 @@
         width: 50%;
     }
     /* ************************************* */
-    /* CONTACT PAGE CARDS */
-    /* .contact-info, .message {
-        height: 400px;
-        width: 400px;
-        padding: var(--default-padding);
-        border: 1px solid black;
-        border-radius: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.384);
-    } */
-    /* ***************** */
     /* CV-CARD HOVER */
     .card:hover {
         background-color: var(--secondary-color);
@@ -155,4 +144,8 @@
         text-align: center;
     }
     /* ******** */
+    /* CONTACT */
+    .contact-info a:hover {
+        color: var(--secondary-color);
+    }
 }

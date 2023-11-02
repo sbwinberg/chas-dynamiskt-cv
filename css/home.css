@@ -1,8 +1,3 @@
-* {
-    /* outline: 1px solid red; */
-    /* background: rgb(100 100 100 /.05); */
-}
-
 .home {
     text-decoration: underline;
 }
@@ -15,20 +10,6 @@
 .image-wrapper,
 .text-wrapper {
     width: min(700px, 95%);
-
-
-
-
-
-
-    /* PROBLEM WITH SMALL SS */
-    /* outline: 1px solid red; */
-
-
-
-
-
-    
     overflow: hidden;  
 }
 .image-wrapper img {
@@ -47,10 +28,10 @@
 }
 .profile-section {
     margin: calc(1em + 2vw) 0;
-    padding: 0 1rem calc(1rem + 2vw);
+    padding: 0 .5rem calc(1rem + 2vw);
     border-bottom: 2px solid var(--primary-color);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--default-padding);
     justify-items: center;
 }

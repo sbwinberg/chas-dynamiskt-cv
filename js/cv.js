@@ -1,11 +1,5 @@
 import data from "../files/education.json" assert { type: 'json'};
 
-// function addGlobalEventListener(type, selector, callback) {
-//     document.addEventListener(type, e => {
-//         if(e.target.matches(selector)) callback(e);
-//     })
-// };
-
 const createModal = ((data) => {
     const modal = document.createElement('dialog');
     modal.className = 'modal' + ' '  + (data.id.toString());
