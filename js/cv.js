@@ -1,5 +1,6 @@
 import data from "../files/education.json" assert { type: 'json'};
 
+
 const createModal = ((data) => {
     const modal = document.createElement('dialog');
     modal.className = 'modal' + ' '  + (data.id.toString());

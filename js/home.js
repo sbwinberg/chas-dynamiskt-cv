@@ -6,6 +6,7 @@
 // })();
 
 //CLICK AND DRAG SCROLL
+// INSPIRATION från Kevin Powell https://codepen.io/kevinpowell/pen/ExbKBQa
 const slider = document.querySelector('.media-scroller');
 let isActive = false, prevPageX, prevScrollLeft;
 
