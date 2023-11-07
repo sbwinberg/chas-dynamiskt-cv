@@ -1,7 +1,6 @@
 import data from "../files/education.json" assert { type: 'json'};
 
-
-const addImg = (location) => {
+const setImg = (location) => {
     const img = document.createElement('img');
     img.src = location.img;
     img.classList.add(location.imgClass);
@@ -54,7 +53,7 @@ const createModal = ((data) => {
     modal.setAttribute("data-modal", '');
     const title = setTitle(data)
     const subject = setSubject(data);
-    const img = addImg(data)
+    const img = setImg(data)
     const link = setLink(data, img);
     const timeSpan = setTimespan(data);
     const description = setDescription(data);
@@ -89,7 +88,7 @@ const renderCards = ((data) => {
 
         for(const key in data[occupation]){
             const card = document.createElement('button');
-            card.className = 'card hover-frame'
+            card.className = 'card hover-frame';
             card.setAttribute("data-open-modal", '');
             card.addEventListener("click", () => {
                 modal.showModal();
