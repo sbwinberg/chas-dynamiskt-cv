@@ -1,9 +1,9 @@
 // GITHUB REPO API
-// (async () => {
-//     const response = await fetch('https://api.github.com/users/sbwinberg/repos');
-//     const projects = await response.json();
-//     console.log(projects);
-// })();
+(async () => {
+    const response = await fetch('https://api.github.com/users/sbwinberg/repos');
+    const projects = await response.json();
+    console.log(projects);
+})();
 
 //CLICK AND DRAG SCROLL
 // INSPIRATION från Kevin Powell https://codepen.io/kevinpowell/pen/ExbKBQa

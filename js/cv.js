@@ -1,44 +1,70 @@
 import data from "../files/education.json" assert { type: 'json'};
 
 
-const createModal = ((data) => {
-    const modal = document.createElement('dialog');
-    modal.className = 'modal' + ' '  + (data.id.toString());
-    modal.setAttribute("data-modal", '');
-
-    const title = document.createElement('h3');
-    title.innerHTML = data.name;
-
-    const subject = document.createElement('h6');
-    subject.innerHTML = data.subject;
-
+const addImg = (location) => {
     const img = document.createElement('img');
-    img.src = data.img;
-    img.classList.add(data.imgClass);
-    img.alt = data.name;
-
+    img.src = location.img;
+    img.classList.add(location.imgClass);
+    img.alt = location.name;
+    return img;
+}
+const setTitle = (location) => {
+    const title = document.createElement('h2');
+    title.innerText = location.name;
+    return title;
+}
+const setSubject = (location) => {
+    const subject = document.createElement('h5');
+    subject.innerHTML = location.subject;
+    return subject;
+}
+const setLink = (location, img) => {
     const link = document.createElement('a');
-    link.href = data.href;
+    link.href = location.href;
     link.target = '_blank';
     link.appendChild(img);
-
+    return link;
+}
+const setTimespan = (location) => {
     const timeSpan = document.createElement('h5');
-    timeSpan.innerHTML = data.yearStart + ' - ' + data.yearEnd;
-
+    timeSpan.innerHTML = location.yearStart + ' - ' + location.yearEnd;
+    return timeSpan;
+}
+const setDescription = (location) => {
     const description = document.createElement('p');
     description.className = 'description';
-    description.innerHTML = data.description;
-
+    description.innerHTML = location.description;
+    return description;
+}
+const addCloseButton = (modal) => {
     const closeButton = document.createElement('button');
     closeButton.className = 'close material-icons md-36';
     closeButton.setAttribute("data-close-modal", "");
     closeButton.innerHTML = 'close';
-
     closeButton.addEventListener("click", () => {
         modal.close();
         modal.style.display = 'none'
     });
 
+    return closeButton;
+}
+
+const createModal = ((data) => {
+    const modal = document.createElement('dialog');
+    modal.setAttribute("data-modal", '');
+    const title = setTitle(data)
+    const subject = setSubject(data);
+    const img = addImg(data)
+    const link = setLink(data, img);
+    const timeSpan = setTimespan(data);
+    const description = setDescription(data);
+    const closeButton = addCloseButton(modal);
+    modal.appendChild(title);
+    modal.appendChild(subject);
+    modal.appendChild(link);
+    modal.appendChild(timeSpan);
+    modal.appendChild(description);
+    modal.appendChild(closeButton);
     modal.addEventListener("click", e => {
         const dialogDimensions = modal.getBoundingClientRect();
         if (
@@ -51,13 +77,6 @@ const createModal = ((data) => {
             modal.style.display = 'none'
         }
     });
-    
-    modal.appendChild(title);
-    modal.appendChild(subject);
-    modal.appendChild(link);
-    modal.appendChild(timeSpan);
-    modal.appendChild(description);
-    modal.appendChild(closeButton);
     return modal;
 });
 
@@ -76,17 +95,10 @@ const renderCards = ((data) => {
                 modal.showModal();
                 modal.style.display = 'flex';
             })
-    
-            const title = document.createElement('h4');
-            title.innerHTML = data[occupation][key].name;
-    
-            const img = document.createElement('img');
-            img.src = data[occupation][key].img;
-            img.classList.add(data[occupation][key].imgClass);
-            img.alt = data[occupation][key].name;
 
+            const title = setTitle(data[occupation][key])
+            const img = addImg(data[occupation][key]);
             const modal = createModal(data[occupation][key])
-
             card.appendChild(title);
             card.appendChild(img);
             container.appendChild(card);
@@ -94,5 +106,4 @@ const renderCards = ((data) => {
         }
     }
 })(data);
-
 
