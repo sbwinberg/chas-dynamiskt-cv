@@ -17,18 +17,18 @@ const setLink = (location) => {
     const projects = await response.json();
     const container = document.querySelector('.project-cards');
     for(const project in projects){
-        // console.log(projects[project])
-
         const card = document.createElement('div');
+        const cardContent = document.createElement('div');
+        cardContent.className = 'card-content';
         card.className = 'card media-element';
 
         //  hover-frame till senare
         const title = setTitle(projects[project]);
         const link = setLink(projects[project])
 
-
-        card.appendChild(title);
-        card.appendChild(link);
+        cardContent.appendChild(title);
+        cardContent.appendChild(link);
+        card.appendChild(cardContent);
         container.appendChild(card);
     }
 
@@ -46,6 +46,7 @@ const setLink = (location) => {
         cards[i].style.opacity = 1;
         cards[i].style.backgroundRepeat = 'no-repeat';
         cards[i].style.backgroundSize = 'cover';
+        cards[i].style.backgroundPosition = 'center';
     }
 })();
 

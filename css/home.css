@@ -70,15 +70,20 @@
     aspect-ratio: 1/1.2;
     padding: var(--default-padding);
     background-color: gray;
-    border: 1px solid black;
+    box-shadow: rgba(0, 0, 0, 0.1) -5px 10px 20px -7px;
     border-radius: 10px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    justify-content: center;
 }
+.card:hover {
+    opacity: 0.1;
+}
+/* .card:hover .card-content{
+    display: block;
+} */
+
+
 .card a {
     text-decoration: none;
     background-color: var(--primary-color);
@@ -86,6 +91,6 @@
     padding: 0 var(--default-padding);
     border-radius: 5px;
 }
-.tic-tac-toe {
-    width: 60%;
+.card-content {
+    display: none;
 }

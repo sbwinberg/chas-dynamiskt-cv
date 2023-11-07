@@ -61,7 +61,7 @@
     }
     /* ************************************* */
     /* CV-CARD HOVER */
-    .card:hover {
+    /* .card:hover {
         background-color: var(--secondary-color);
         box-shadow: var(--card-shadow);
         transition: all .2s;
@@ -71,7 +71,7 @@
         scale: 0.98;
         box-shadow: inset 0 0 5px;
         transition: all 0s;
-    }
+    } */
     .close:hover {
         cursor: pointer;
         color: rgba(0, 0, 0, 0.61);
