@@ -116,16 +116,17 @@
     .media-scroller{
         grid-auto-columns: 27%;
     }
-    .media-scroller.active {
+    .media-scroller:active {
+        cursor: grab;
         scroll-behavior: smooth;
     }
     .project-cards {
         gap: 2vw;
         margin: 0 2vw;
     }
-    .card:hover {
-        filter: blur(3px);
-        -webkit-filter: blur(3px);
+    .card:hover{
+        filter: blur(1px);
+        -webkit-filter: blur(1px);
         opacity: .5;
         transition: all .2s ease-out;
     }
