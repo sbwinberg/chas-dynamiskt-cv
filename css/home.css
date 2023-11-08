@@ -57,7 +57,7 @@
 }
 .media-scroller.active {
     cursor: grab;
-    /* scroll-behavior: smooth; */
+    scroll-behavior: smooth;
 }
 .project-cards {
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
@@ -75,8 +75,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url();
 }
-.card:hover {
+.media-element:hover {
     opacity: 0.1;
 }
 /* .card:hover .card-content{
