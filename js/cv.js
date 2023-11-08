@@ -114,5 +114,3 @@ const renderCards = ((data) => {
         }
     }
 })(data);
-
-
