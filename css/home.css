@@ -57,7 +57,6 @@
 }
 .media-scroller.active {
     cursor: grab;
-    scroll-behavior: smooth;
 }
 .project-cards {
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
@@ -69,22 +68,15 @@
 .card {
     aspect-ratio: 1/1.2;
     padding: var(--default-padding);
-    background-color: gray;
-    box-shadow: rgba(0, 0, 0, 0.1) -5px 10px 20px -7px;
-    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url();
+    background-color: gray;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
 }
-.media-element:hover {
-    opacity: 0.1;
-}
-/* .card:hover .card-content{
-    display: block;
-} */
-
-
 .card a {
     text-decoration: none;
     background-color: var(--primary-color);
@@ -93,5 +85,11 @@
     border-radius: 5px;
 }
 .card-content {
-    display: none;
+    color: white;
+    /* z-index: 100; */
+    width: 100%;
+    position: absolute;
+    inset: 50% auto auto 50%; 
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
