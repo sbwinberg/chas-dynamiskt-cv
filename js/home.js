@@ -23,7 +23,7 @@ const createCardBg = () => {
 }
 // RENDER COMPLETE CARDS
 const renderCards = (projects) => {
-    const container = document.querySelector('.project-cards');
+    const container = document.querySelector('.media-scroller');
     for(const project in projects){
         // CREATE ELEMENTS
         const card = createCard(projects[project]);
@@ -76,7 +76,16 @@ slider.addEventListener("mouseup", dragStop);
 slider.addEventListener("mouseleave", leave);
 slider.addEventListener("mousemove", dragging);
 
-
+// PROJECT ARROW BUTTONS
+const arrows = document.querySelectorAll('.carousel-button')
+const firstImg = slider.querySelector('.media-element')
+console.log(firstImg);
+const firstImgWidth = firstImg.clientWidth + 32;
+arrows.forEach(arrow => {
+    arrow.addEventListener('click', () => {
+        slider.scrollLeft += arrow.id == "left" ? -firstImgWidth : firstImgWidth;
+    })
+})
 // const setBgImg = () => {
 //     const cards = document.querySelectorAll('.card');
 //     for(let i = 0; i < cards.length; i++) {

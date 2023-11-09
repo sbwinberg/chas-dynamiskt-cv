@@ -1,6 +1,6 @@
 @media screen and (700px <= width < 1000px){
     .media-scroller{
-        grid-auto-columns: 36%;
+        grid-auto-columns: 32%;
     }
 }
 @media screen and (width > 2000px){
@@ -114,14 +114,7 @@
     /* ********** */
     /* PROJECTS */
     .media-scroller{
-        grid-auto-columns: 27%;
-    }
-    .media-scroller:active {
-        cursor: grab;
-        scroll-behavior: smooth;
-    }
-    .project-cards {
-        gap: 2vw;
+        grid-auto-columns: calc(25% - 6vw);
         margin: 0 2vw;
     }
     .card:hover .card-bg{
