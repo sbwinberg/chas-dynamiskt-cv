@@ -124,14 +124,11 @@
         gap: 2vw;
         margin: 0 2vw;
     }
-    .card:hover{
-        filter: blur(1px);
-        -webkit-filter: blur(1px);
-        opacity: .5;
+    .card:hover .card-bg{
+        filter: blur(3px);
+        -webkit-filter: blur(3px);
+        opacity: .7;
         transition: all .2s ease-out;
-    }
-    .card:hover .card-content{
-        display: block;
     }
     .card a:hover{
         background-color: white;

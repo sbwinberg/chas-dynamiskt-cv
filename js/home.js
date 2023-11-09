@@ -4,16 +4,11 @@ const setTitle = (location) => {
     title.innerText = location.name;
     return title;
 }
-const setLink = (location) => {
-    const link = document.createElement('a');
-    link.className = 'project-link'
-    link.href = location.html_url;
-    link.target = '_blank';
-    return link;
-}
-const createCard = () => {
-    const card = document.createElement('div');
+const createCard = (location) => {
+    const card = document.createElement('a');
+    card.href = location.html_url;
     card.className = 'card media-element';
+    card.target = '_blank';
     return card
 }
 const createCardContent = () => {
@@ -23,7 +18,7 @@ const createCardContent = () => {
 }
 const createCardBg = () => {
     const bgContainer = document.createElement('div');
-    bgContainer.className = 'card-bg blur'
+    bgContainer.className = 'card-bg'
     return bgContainer
 }
 // RENDER COMPLETE CARDS
@@ -31,14 +26,12 @@ const renderCards = (projects) => {
     const container = document.querySelector('.project-cards');
     for(const project in projects){
         // CREATE ELEMENTS
-        const card = createCard();
+        const card = createCard(projects[project]);
         const cardContent = createCardContent();
         const title = setTitle(projects[project]);
-        const link = setLink(projects[project])
         const bg = createCardBg();
         // APPEND
         cardContent.appendChild(title);
-        cardContent.appendChild(link);
         card.appendChild(bg);
         card.appendChild(cardContent);
         container.appendChild(card);
