@@ -127,11 +127,6 @@
         box-shadow: var(--card-shadow);
         transition: all .2s;
     }
-    /* .card a{
-        width: 30%;
-        padding: 0.5rem;
-        text-align: center;
-    } */
     /* ******** */
     /* CONTACT */
     .contact-info a:hover {
