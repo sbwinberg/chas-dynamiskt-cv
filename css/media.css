@@ -1,12 +1,11 @@
 @media screen and (700px <= width < 1000px){
     .media-scroller{
-        grid-auto-columns: 32%;
+        grid-auto-columns: calc(33.3% - 1.3vw);
     }
 }
 @media screen and (width > 2000px){
     .media-scroller{
-        margin: 0 auto;
-        grid-auto-columns: 15%;
+        grid-auto-columns: calc(16.67% - 1.67vw);
     }
 }
 @media screen and (2000px >= width >= 1000px) {
@@ -114,8 +113,7 @@
     /* ********** */
     /* PROJECTS */
     .media-scroller{
-        grid-auto-columns: calc(25% - 6vw);
-        margin: 0 2vw;
+        grid-auto-columns: calc(25% - 1.5vw);
     }
     .card:hover .card-bg{
         filter: blur(3px);
@@ -129,11 +127,11 @@
         box-shadow: var(--card-shadow);
         transition: all .2s;
     }
-    .card a{
+    /* .card a{
         width: 30%;
         padding: 0.5rem;
         text-align: center;
-    }
+    } */
     /* ******** */
     /* CONTACT */
     .contact-info a:hover {

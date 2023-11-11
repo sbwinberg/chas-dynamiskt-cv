@@ -47,15 +47,12 @@
 }
 .media-scroller {
     display: grid;
-    gap: var(--default-padding);
     grid-auto-flow: column;
-    grid-auto-columns: 49%;
+    grid-auto-columns: calc(50% - 1vw);
     gap: 2vw;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
-    padding-left: var(--default-padding);
     scroll-snap-stop: normal;
-    scroll-padding: var(--default-padding, 1rem);
     cursor: pointer;
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
@@ -79,12 +76,11 @@
     border: 1px solid black
 }
 .prev{
-    left: 2px
+    left: 1rem
 }
 .next{
-    right: 2px;
+    right: 1rem;
 }
-
 .card {
     aspect-ratio: 1/1.2;
     display: flex;
