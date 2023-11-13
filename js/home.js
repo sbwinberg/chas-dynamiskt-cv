@@ -1,15 +1,22 @@
 // SINGLE RESPONSIBILITY FUNCTIONS FOR CARD CREATION
 const setTitle = (location) => {
     const title = document.createElement('h2');
+    title.className = 'project-title'
     title.innerText = location.name;
     return title;
 }
 const createCard = (location) => {
-    const card = document.createElement('a');
-    card.href = location.html_url;
+    const card = document.createElement('div');
     card.className = 'card media-element';
-    card.target = '_blank';
     return card
+}
+const createLink = (location) => {
+    const link = document.createElement('a');
+    link.className = 'project-link';
+    link.href = location.html_url;
+    link.target = '_blank';
+    link.innerText = 'Link'
+    return link;
 }
 const createCardContent = () => {
     const cardContent = document.createElement('div');
@@ -29,9 +36,11 @@ const renderCards = (projects) => {
         const card = createCard(projects[project]);
         const cardContent = createCardContent();
         const title = setTitle(projects[project]);
+        const link = createLink(projects[project]);
         const bg = createCardBg();
         // APPEND
         cardContent.appendChild(title);
+        cardContent.appendChild(link);
         card.appendChild(bg);
         card.appendChild(cardContent);
         container.appendChild(card);
@@ -46,35 +55,39 @@ const renderCards = (projects) => {
 
 //CLICK AND DRAG SCROLL
 // INSPIRATION från Kevin Powell https://codepen.io/kevinpowell/pen/ExbKBQa
+// VALDE ATT ENDAST HA SLIDER PÅ TABLET OCH MINDRE
 const slider = document.querySelector('.media-scroller');
-let isActive = false, prevPageX, prevScrollLeft;
+if(window.innerWidth < 700){
+    let isActive = false, prevPageX, prevScrollLeft;
+    
+    const dragStart = (e) => {
+        e.preventDefault();
+        isActive = true;
+        prevPageX = e.pageX;
+        prevScrollLeft = slider.scrollLeft;
+        slider.classList.add('active');
+    }
+    const dragStop = () =>{
+        isActive = false;
+        slider.classList.remove('active');
+    }
+    const dragging = (e) => {
+        if(!isActive) return;
+        e.preventDefault();
+        let positionDiff = e.pageX - prevPageX;
+        slider.scrollLeft = prevScrollLeft - positionDiff;
+    }
+    const leave = () => {
+        slider.classList.remove('active');
+        isActive = false;
+    }
+    
+    slider.addEventListener("mousedown", dragStart);
+    slider.addEventListener("mouseup", dragStop);
+    slider.addEventListener("mouseleave", leave);
+    slider.addEventListener("mousemove", dragging);
+}
 
-const dragStart = (e) => {
-    e.preventDefault();
-    isActive = true;
-    prevPageX = e.pageX;
-    prevScrollLeft = slider.scrollLeft;
-    slider.classList.add('active');
-}
-const dragStop = () =>{
-    isActive = false;
-    slider.classList.remove('active');
-}
-const dragging = (e) => {
-    if(!isActive) return;
-    e.preventDefault();
-    let positionDiff = e.pageX - prevPageX;
-    slider.scrollLeft = prevScrollLeft - positionDiff;
-}
-const leave = () => {
-    slider.classList.remove('active');
-    isActive = false;
-}
-
-slider.addEventListener("mousedown", dragStart);
-slider.addEventListener("mouseup", dragStop);
-slider.addEventListener("mouseleave", leave);
-slider.addEventListener("mousemove", dragging);
 
 // PROJECT ARROW BUTTONS
 const arrows = document.querySelectorAll('.carousel-button')

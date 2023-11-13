@@ -1,3 +1,14 @@
+@media screen and (width > 700px){
+    .carousel-button {
+        display: block;
+    }
+    .carousel-button:active {
+        box-shadow: inset 10px var(--primary-color);
+        scale: 0.98;
+        transition: box-shadow .1s, scale .1s;
+    }
+}
+
 @media screen and (700px <= width < 1000px){
     .media-scroller{
         grid-auto-columns: calc(33.3% - 1.3vw);
@@ -15,10 +26,7 @@
         &::after {
             content: '';
             position: absolute;
-            top: 1.25rem;
-            bottom: 1.25rem;
-            left: 1.25rem;
-            right: 1.25rem;
+            inset: 1.25rem;
         }
         &::before {
             border-top: 1px solid white;
@@ -44,7 +52,7 @@
     .trigger:hover {
         scale: 1.1;
         box-shadow: 0 0 5px black;
-        transition: all .2s;
+        transition: scale .2s, box-shadow .2s;
         cursor: pointer;
     }
     .trigger:active {
@@ -96,12 +104,12 @@
     .image-wrapper a:hover{
         scale: 1.05;
         box-shadow: 0 0 20px black;
-        transition: all .2s;
+        transition: scale 0.2s, box-shadow 0.2s;
     }
     .image-wrapper a:active {
         scale: 1;
         box-shadow: inset 0 0 5px black;
-        transition: all 0s;
+        transition: scale 0s, box-shadow 0s;
     }
     .image-wrapper:hover img {
         transform: scale(1.2) translateY(5%);
@@ -125,11 +133,17 @@
         background-color: white;
         color: black;
         box-shadow: var(--card-shadow);
-        transition: all .2s;
+        transition: background-color .2s, color .2s, box-shadow .2s;
     }
     /* ******** */
+    /* CV */
+    dialog a:hover {
+        scale: 1.05;
+    }
+    /* ** */
     /* CONTACT */
     .contact-info a:hover {
         color: var(--secondary-color);
     }
+
 }

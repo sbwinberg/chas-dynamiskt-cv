@@ -52,6 +52,7 @@
     gap: 2vw;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
+    scroll-behavior: smooth;
     scroll-snap-stop: normal;
     cursor: pointer;
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
@@ -76,9 +77,11 @@
     border: 1px solid black
 }
 .prev{
+    display: none;
     left: 1rem
 }
 .next{
+    display: none;
     right: 1rem;
 }
 .card {
@@ -100,18 +103,30 @@
 }
 .project-link{
     text-decoration: none;
-    background-color: var(--primary-color);
+    text-transform: uppercase;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    padding: 3em;
+    background: linear-gradient(var(--primary-color), white);
     color: white;
     padding: 0 var(--default-padding);
     border-radius: 5px;
+    outline: 1px solid black;
+}
+.project-title {
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
 }
 .card-content {
+    font-size: clamp(.5rem, .5rem + 2vw, 2rem);
+    /* background-color: black; */
     color: white;
     width: 100%;
+    height: 100%;
     position: absolute;
+    text-align: center;
     inset: 50% auto auto 50%; 
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
 }
