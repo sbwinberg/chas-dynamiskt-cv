@@ -78,7 +78,6 @@ const createModal = ((data) => {
     return modal;
 });
 
-
 // Cards
 const renderCards = ((data) => {
     for(const occupation in data){

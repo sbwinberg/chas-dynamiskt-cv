@@ -54,7 +54,7 @@ const renderCards = (projects) => {
 })();
 
 //CLICK AND DRAG SCROLL
-// INSPIRATION från Kevin Powell https://codepen.io/kevinpowell/pen/ExbKBQa
+// INSPIRATION från Coding Nepal https://www.youtube.com/watch?v=7HPsdVQhpRw
 // VALDE ATT ENDAST HA SLIDER PÅ TABLET OCH MINDRE
 const slider = document.querySelector('.media-scroller');
 if(window.innerWidth < 700){
@@ -88,7 +88,6 @@ if(window.innerWidth < 700){
     slider.addEventListener("mousemove", dragging);
 }
 
-
 // PROJECT ARROW BUTTONS
 const arrows = document.querySelectorAll('.carousel-button')
 const firstImg = slider.querySelector('.media-element')
@@ -104,11 +103,7 @@ arrows.forEach(arrow => {
 
 
 
-
-
-
-
-
+// RANDOM BACKGROUND IMAGES, ANVÄNDS INTE
 
 // const setBgImg = () => {
 //     const cards = document.querySelectorAll('.card');
