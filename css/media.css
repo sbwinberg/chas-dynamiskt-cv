@@ -137,6 +137,10 @@
         box-shadow: var(--card-shadow);
         transition: background-color .2s, color .2s, box-shadow .2s;
     }
+    .project-title {
+        background-color: transparent;
+        text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+    }
     /* ******** */
     /* CV */
     dialog a:hover {
