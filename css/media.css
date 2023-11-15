@@ -21,32 +21,34 @@
 }
 @media screen and (2000px >= width >= 1000px) {
 /* IMAGE HOVER-FRAMES */
-    .hover-frame {
-        &::before,
-        &::after {
-            content: '';
-            position: absolute;
-            inset: 1.25rem;
-        }
-        &::before {
-            border-top: 1px solid white;
-            border-bottom: 1px solid white;
-            transform: scale(0, 1);
-            transition: transform ease-out .25s;
-        }
-        &:hover::before {
-            transform: scale(1.05, 1);
-        }
-        &::after{
-            border-left: 1px solid white;
-            border-right: 1px solid white;
-            transform: scale(1, 0);
-            transition: transform ease-out .25s;
-        }
-        &:hover::after {
-            transform: scale(1, 1.05);
-        }
+    .hover-frame::before,
+    .hover-frame::after {
+        content: '';
+        position: absolute;
+        inset: 1.25rem;
     }
+    .hover-frame::before {
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        transform: scale(0, 1);
+        transition: transform ease-out .25s;
+    }
+    .hover-frame:hover::before {
+        transform: scale(1.05, 1);
+    }
+    .hover-frame::after{
+        border-left: 1px solid white;
+        border-right: 1px solid white;
+        transform: scale(1, 0);
+        transition: transform ease-out .25s;
+    }
+    .hover-frame:hover::after {
+        transform: scale(1, 1.05);
+    }
+    .hover-frame:hover {
+        scale: 1.01;
+    }
+
     /* *************** */
     /* PROFILE PIC/BUTTON HOVER + FOOTER LOOKS */
     .trigger:hover {

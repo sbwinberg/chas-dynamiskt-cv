@@ -60,6 +60,14 @@ main{
     display: block;
     width: 70%; 
 }
+.hover-frame::before {
+    border-top: 1px solid black !important;
+    border-bottom: 1px solid black !important;
+}
+.hover-frame::after{
+    border-left: 1px solid black !important;
+    border-right: 1px solid black !important;
+}
 .white-to-black{
     filter: invert(100%);
 }
